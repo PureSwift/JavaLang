@@ -66,10 +66,6 @@ let package = Package(
             targets: ["JavaMath"]
         ),
         .library(
-            name: "JavaMath",
-            targets: ["JavaMath"]
-        ),
-        .library(
             name: "JavaNet",
             targets: ["JavaNet"]
         ),/*
