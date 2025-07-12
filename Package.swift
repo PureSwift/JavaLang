@@ -42,7 +42,7 @@ let javaIncludePath = "\(javaHome)/include"
 let package = Package(
     name: "JavaLang",
     platforms: [
-        .macOS(.v10_15)
+        .macOS(.v15)
     ],
     products: [
         .library(
