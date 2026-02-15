@@ -3,8 +3,8 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaInterface("java.time.chrono.ChronoLocalDateTime", extends: Temporal.self, TemporalAdjuster.self, Comparable<ChronoLocalDateTime<JavaObject>>.self)
-public struct ChronoLocalDateTime<D: AnyJavaObject> {
+@JavaInterface("java.time.chrono.ChronoLocalDateTime", extends: Temporal.self, TemporalAdjuster.self)
+public struct ChronoLocalDateTime {
   /// Java method `equals`.
   ///
   /// ### Java method signature
@@ -93,7 +93,7 @@ public struct ChronoLocalDateTime<D: AnyJavaObject> {
   /// public abstract java.time.chrono.ChronoLocalDateTime<D> java.time.chrono.ChronoLocalDateTime.with(java.time.temporal.TemporalField,long)
   /// ```
 @JavaMethod
-  public func with(_ arg0: TemporalField?, _ arg1: Int64) -> ChronoLocalDateTime<D>!
+  public func with(_ arg0: TemporalField?, _ arg1: Int64) -> ChronoLocalDateTime!
 
   /// Java method `with`.
   ///
@@ -111,7 +111,7 @@ public struct ChronoLocalDateTime<D: AnyJavaObject> {
   /// public default java.time.chrono.ChronoLocalDateTime<D> java.time.chrono.ChronoLocalDateTime.with(java.time.temporal.TemporalAdjuster)
   /// ```
 @JavaMethod
-  public func with(_ arg0: TemporalAdjuster?) -> ChronoLocalDateTime<D>!
+  public func with(_ arg0: TemporalAdjuster?) -> ChronoLocalDateTime!
 
   /// Java method `query`.
   ///
@@ -147,7 +147,7 @@ public struct ChronoLocalDateTime<D: AnyJavaObject> {
   /// public default java.time.chrono.ChronoLocalDateTime<D> java.time.chrono.ChronoLocalDateTime.minus(java.time.temporal.TemporalAmount)
   /// ```
 @JavaMethod
-  public func minus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime<D>!
+  public func minus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime!
 
   /// Java method `minus`.
   ///
@@ -174,7 +174,7 @@ public struct ChronoLocalDateTime<D: AnyJavaObject> {
   /// public default java.time.chrono.ChronoLocalDateTime<D> java.time.chrono.ChronoLocalDateTime.minus(long,java.time.temporal.TemporalUnit)
   /// ```
 @JavaMethod
-  public func minus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime<D>!
+  public func minus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime!
 
   /// Java method `plus`.
   ///
@@ -183,7 +183,7 @@ public struct ChronoLocalDateTime<D: AnyJavaObject> {
   /// public default java.time.chrono.ChronoLocalDateTime<D> java.time.chrono.ChronoLocalDateTime.plus(java.time.temporal.TemporalAmount)
   /// ```
 @JavaMethod
-  public func plus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime<D>!
+  public func plus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime!
 
   /// Java method `plus`.
   ///
@@ -201,7 +201,7 @@ public struct ChronoLocalDateTime<D: AnyJavaObject> {
   /// public abstract java.time.chrono.ChronoLocalDateTime<D> java.time.chrono.ChronoLocalDateTime.plus(long,java.time.temporal.TemporalUnit)
   /// ```
 @JavaMethod
-  public func plus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime<D>!
+  public func plus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime!
 
   /// Java method `plus`.
   ///

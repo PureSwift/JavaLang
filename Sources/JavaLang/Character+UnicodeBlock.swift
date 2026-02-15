@@ -4,7 +4,7 @@ import SwiftJava
 
 extension Character {
   @JavaClass("java.lang.Character$UnicodeBlock")
-  open class UnicodeBlock: Character.Subset {
+  open class UnicodeBlock: JavaObject {
 
   }
 }

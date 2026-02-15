@@ -3,16 +3,7 @@ import CSwiftJavaJNI
 import SwiftJava
 
 @JavaClass("java.lang.InheritableThreadLocal")
-open class InheritableThreadLocal<T: AnyJavaObject>: ThreadLocal</* MISSING MAPPING FOR */ T> {
+open class InheritableThreadLocal: JavaObject { //: ThreadLocal {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
-
-    /// Java method `childValue`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected T java.lang.InheritableThreadLocal.childValue(T)
-    /// ```
-  @JavaMethod(typeErasedResult: "T!")
-  open func childValue(_ arg0: T?) -> T!
 }
