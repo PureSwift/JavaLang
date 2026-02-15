@@ -208,7 +208,8 @@ let package = Package(
         .testTarget(
             name: "JavaLangTests",
             dependencies: [
-                "JavaLang"
+                "JavaLang",
+                "JavaLangUtil"
             ]
         )
     ]
