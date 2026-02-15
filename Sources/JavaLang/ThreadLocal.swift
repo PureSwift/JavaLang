@@ -22,5 +22,5 @@ open class ThreadLocal<T: AnyJavaObject>: JavaObject {
 }
 extension JavaClass {
   @JavaStaticMethod
-  public func withInitial<T: AnyJavaObject>(_ arg0: JavaSupplier<JavaObject>?) -> ThreadLocal<JavaObject>! where ObjectType == ThreadLocal<T>
+  public func withInitial<Element: AnyJavaObject>(_ arg0: JavaSupplier<JavaObject>?) -> ThreadLocal<JavaObject>! where ObjectType == ThreadLocal<Element>
 }

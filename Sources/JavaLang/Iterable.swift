@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import SwiftJava
 
 @JavaInterface("java.lang.Iterable")
-public struct Iterable<T: AnyJavaObject> {
+public struct Iterable<T: AnyJavaObject & JavaValue> {
   @JavaMethod
   public func iterator() -> JavaIterator<T>!
 
