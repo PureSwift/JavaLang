@@ -20,32 +20,12 @@ let package = Package(
             targets: ["JavaBeans"]
         ),
         .library(
-            name: "JavaIO",
-            targets: ["JavaIO"]
-        ),
-        .library(
             name: "JavaMath",
             targets: ["JavaMath"]
         ),
         .library(
-            name: "JavaNet",
-            targets: ["JavaNet"]
-        ),/*
-        .library(
-            name: "JavaNIO",
-            targets: ["JavaNIO"]
-        ),
-        .library(
-            name: "JavaSecurity",
-            targets: ["JavaSecurity"]
-        ),*/
-        .library(
             name: "JavaTime",
             targets: ["JavaTime"]
-        ),
-        .library(
-            name: "JavaUtil",
-            targets: ["JavaUtil"]
         )
     ],
     dependencies: [
@@ -56,73 +36,20 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "JavaIO",
-            dependencies: [
-                .product(
-                    name: "JavaKit",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitCollection",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-            ],
-            exclude: ["swift-java.config"],
-            swiftSettings: [
-              .swiftLanguageMode(.v5),
-            ]
-        ),/*
-        .target(
-            name: "JavaNIO",
-            dependencies: [
-                .product(
-                    name: "JavaKit",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitCollection",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-                "JavaLang",
-                "JavaIO"
-            ],
-            exclude: ["swift-java.config"],
-            swiftSettings: [
-              .swiftLanguageMode(.v5),
-            ]
-        ),*/
-        .target(
             name: "JavaLang",
             dependencies: [
                 .product(
-                    name: "JavaKit",
+                    name: "SwiftJava",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitCollection",
+                    name: "JavaLangReflect",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitReflection",
+                    name: "JavaUtilFunction",
                     package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitFunction",
-                    package: "swift-java"
-                ),
-                "JavaIO"
+                )
             ],
             exclude: ["swift-java.config"],
             swiftSettings: [
@@ -133,22 +60,17 @@ let package = Package(
             name: "JavaAWT",
             dependencies: [
                 .product(
-                    name: "JavaKit",
+                    name: "SwiftJava",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitCollection",
+                    name: "JavaLangReflect",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitReflection",
+                    name: "JavaIO",
                     package: "swift-java"
                 ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-                "JavaIO",
                 "JavaLang"
             ],
             exclude: ["swift-java.config"],
@@ -160,86 +82,18 @@ let package = Package(
             name: "JavaTime",
             dependencies: [
                 .product(
-                    name: "JavaKit",
+                    name: "SwiftJava",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitCollection",
+                    name: "JavaLangReflect",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitReflection",
+                    name: "JavaIO",
                     package: "swift-java"
                 ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-                "JavaLang",
-                "JavaIO",
-            ],
-            exclude: ["swift-java.config"],
-            swiftSettings: [
-              .swiftLanguageMode(.v5),
-            ]
-        ),
-        .target(
-            name: "JavaNet",
-            dependencies: [
-                .product(
-                    name: "JavaKit",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitCollection",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitReflection",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitNetwork",
-                    package: "swift-java"
-                ),
-                "JavaIO",
-                "JavaUtil"
-            ],
-            exclude: ["swift-java.config"],
-            swiftSettings: [
-              .swiftLanguageMode(.v5),
-            ]
-        ),
-        .target(
-            name: "JavaUtil",
-            dependencies: [
-                .product(
-                    name: "JavaKit",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitCollection",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitReflection",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitFunction",
-                    package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-                "JavaIO",
-                "JavaLang",
-                "JavaTime"
+                "JavaLang"
             ],
             exclude: ["swift-java.config"],
             swiftSettings: [
@@ -250,26 +104,21 @@ let package = Package(
             name: "JavaBeans",
             dependencies: [
                 .product(
-                    name: "JavaKit",
+                    name: "SwiftJava",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitCollection",
+                    name: "JavaLangReflect",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitReflection",
+                    name: "JavaUtilFunction",
                     package: "swift-java"
                 ),
                 .product(
-                    name: "JavaKitFunction",
+                    name: "JavaIO",
                     package: "swift-java"
-                ),
-                .product(
-                    name: "JavaKitIO",
-                    package: "swift-java"
-                ),
-                "JavaIO"
+                )
             ],
             exclude: ["swift-java.config"],
             swiftSettings: [
@@ -289,8 +138,7 @@ let package = Package(
         .testTarget(
             name: "JavaLangTests",
             dependencies: [
-                "JavaLang",
-                "JavaUtil"
+                "JavaLang"
             ]
         )
     ]
