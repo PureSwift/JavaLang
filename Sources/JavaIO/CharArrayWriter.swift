@@ -44,7 +44,7 @@ open class CharArrayWriter: Writer {
     /// public java.lang.Appendable java.io.CharArrayWriter.append(java.lang.CharSequence) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func append(_ arg0: CharSequence?) throws -> Appendable!
+  open override func append(_ arg0: CharSequence?) throws -> Appendable!
 
     /// Java method `append`.
     ///
@@ -62,7 +62,7 @@ open class CharArrayWriter: Writer {
     /// public java.lang.Appendable java.io.CharArrayWriter.append(java.lang.CharSequence,int,int) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func append(_ arg0: CharSequence?, _ arg1: Int32, _ arg2: Int32) throws -> Appendable!
+  open override func append(_ arg0: CharSequence?, _ arg1: Int32, _ arg2: Int32) throws -> Appendable!
 
     /// Java method `append`.
     ///
@@ -71,7 +71,7 @@ open class CharArrayWriter: Writer {
     /// public java.lang.Appendable java.io.CharArrayWriter.append(char) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func append(_ arg0: UInt16) throws -> Appendable!
+  open override func append(_ arg0: UInt16) throws -> Appendable!
 
     /// Java method `append`.
     ///
