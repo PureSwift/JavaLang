@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.chrono.ThaiBuddhistDate", implements: ChronoLocalDate.self, Serializable.self)
+@JavaClass("java.time.chrono.ThaiBuddhistDate", implements:  Serializable.self)
 open class ThaiBuddhistDate: JavaObject {
   /// Java method `equals`.
   ///

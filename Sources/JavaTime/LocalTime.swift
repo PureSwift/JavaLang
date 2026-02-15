@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.LocalTime", implements: Temporal.self, TemporalAdjuster.self, Comparable<LocalTime>.self, Serializable.self)
+@JavaClass("java.time.LocalTime", implements: Temporal.self, TemporalAdjuster.self,  Serializable.self)
 open class LocalTime: JavaObject {
   /// Java method `get`.
   ///

@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaInterface("java.time.chrono.Chronology", extends: Comparable<Chronology>.self)
+@JavaInterface("java.time.chrono.Chronology")
 public struct Chronology {
   /// Java method `equals`.
   ///
@@ -247,32 +247,4 @@ public struct Chronology {
   /// ```
 @JavaMethod
   public func isIsoBased() -> Bool
-}
-extension JavaClass<Chronology> {
-  /// Java method `of`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static java.time.chrono.Chronology java.time.chrono.Chronology.of(java.lang.String)
-  /// ```
-@JavaStaticMethod
-  public func of(_ arg0: String) -> Chronology!
-
-  /// Java method `from`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static java.time.chrono.Chronology java.time.chrono.Chronology.from(java.time.temporal.TemporalAccessor)
-  /// ```
-@JavaStaticMethod
-  public func from(_ arg0: TemporalAccessor?) -> Chronology!
-
-  /// Java method `getAvailableChronologies`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static java.util.Set<java.time.chrono.Chronology> java.time.chrono.Chronology.getAvailableChronologies()
-  /// ```
-@JavaStaticMethod
-  public func getAvailableChronologies() -> JavaSet<Chronology>!
 }

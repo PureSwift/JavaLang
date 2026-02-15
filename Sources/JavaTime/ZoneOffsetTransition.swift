@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.zone.ZoneOffsetTransition", implements: Comparable<ZoneOffsetTransition>.self, Serializable.self)
+@JavaClass("java.time.zone.ZoneOffsetTransition", implements:  Serializable.self)
 open class ZoneOffsetTransition: JavaObject {
   /// Java method `getInstant`.
   ///

@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.util.Calendar", implements: Serializable.self, Cloneable.self, Comparable<Calendar>.self)
+@JavaClass("java.util.Calendar", implements: Serializable.self, Cloneable.self)
 open class Calendar: JavaObject {
   /// Java method `get`.
   ///

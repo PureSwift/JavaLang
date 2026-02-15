@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.ZonedDateTime", implements: Temporal.self, ChronoZonedDateTime<LocalDate>.self, Serializable.self)
+@JavaClass("java.time.ZonedDateTime", implements: Temporal.self,  Serializable.self)
 open class ZonedDateTime: JavaObject {
   /// Java method `withEarlierOffsetAtOverlap`.
   ///

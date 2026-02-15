@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.Duration", implements: TemporalAmount.self, Comparable<Duration>.self, Serializable.self)
+@JavaClass("java.time.Duration", implements: TemporalAmount.self,  Serializable.self)
 open class Duration: JavaObject {
   /// Java method `get`.
   ///

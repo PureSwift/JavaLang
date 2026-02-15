@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.chrono.MinguoDate", implements: ChronoLocalDate.self, Serializable.self)
+@JavaClass("java.time.chrono.MinguoDate", implements:  Serializable.self)
 open class MinguoDate: JavaObject {
   /// Java method `equals`.
   ///

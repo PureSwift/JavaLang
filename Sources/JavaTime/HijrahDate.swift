@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.chrono.HijrahDate", implements: ChronoLocalDate.self, Serializable.self)
+@JavaClass("java.time.chrono.HijrahDate", implements:  Serializable.self)
 open class HijrahDate: JavaObject {
   /// Java method `withVariant`.
   ///

@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.math.BigDecimal", implements: Comparable<BigDecimal>.self)
+@JavaClass("java.math.BigDecimal")
 open class BigDecimal: JavaNumber {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, environment: JNIEnvironment? = nil)

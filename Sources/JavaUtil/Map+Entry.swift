@@ -3,61 +3,62 @@ import CSwiftJavaJNI
 import SwiftJava
 
 extension Map {
-  @JavaInterface("java.util.Map$Entry")
-  public struct Entry<K: AnyJavaObject, V: AnyJavaObject> {
-    /// Java method `equals`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract boolean java.util.Map$Entry.equals(java.lang.Object)
-    /// ```
-  @JavaMethod
-  public func equals(_ arg0: JavaObject?) -> Bool
+    @JavaInterface("java.util.Map$Entry")
+    public struct Entry {
+        /// Java method `equals`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract boolean java.util.Map$Entry.equals(java.lang.Object)
+        /// ```
+        @JavaMethod
+        public func equals(_ arg0: JavaObject?) -> Bool
 
-    /// Java method `hashCode`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract int java.util.Map$Entry.hashCode()
-    /// ```
-  @JavaMethod
-  public func hashCode() -> Int32
+        /// Java method `hashCode`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract int java.util.Map$Entry.hashCode()
+        /// ```
+        @JavaMethod
+        public func hashCode() -> Int32
 
-    /// Java method `getValue`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract V java.util.Map$Entry.getValue()
-    /// ```
-  @JavaMethod(typeErasedResult: "V!")
-  public func getValue() -> V!
+        /// Java method `getValue`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract V java.util.Map$Entry.getValue()
+        /// ```
+        @JavaMethod(typeErasedResult: "V!")
+        public func getValue() -> V!
 
-    /// Java method `getKey`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract K java.util.Map$Entry.getKey()
-    /// ```
-  @JavaMethod(typeErasedResult: "K!")
-  public func getKey() -> K!
+        /// Java method `getKey`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract K java.util.Map$Entry.getKey()
+        /// ```
+        @JavaMethod(typeErasedResult: "K!")
+        public func getKey() -> K!
 
-    /// Java method `setValue`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract V java.util.Map$Entry.setValue(V)
-    /// ```
-  @JavaMethod(typeErasedResult: "V!")
-  public func setValue(_ arg0: V?) -> V!
-  }
+        /// Java method `setValue`.
+        ///
+        /// ### Java method signature
+        /// ```java
+        /// public abstract V java.util.Map$Entry.setValue(V)
+        /// ```
+        @JavaMethod(typeErasedResult: "V!")
+        public func setValue(_ arg0: V?) -> V!
+    }
 }
+
 extension JavaClass {
-  /// Java method `copyOf`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static <K,V> java.util.Map$Entry<K, V> java.util.Map$Entry.copyOf(java.util.Map$Entry<? extends K, ? extends V>)
-  /// ```
-@JavaStaticMethod
-  public func copyOf<K: AnyJavaObject, V: AnyJavaObject>(_ arg0: Map.Entry<K, V>?) -> Map.Entry<K, V>! where ObjectType == Map.Entry<K, V>
+    /// Java method `copyOf`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static <K,V> java.util.Map$Entry<K, V> java.util.Map$Entry.copyOf(java.util.Map$Entry<? extends K, ? extends V>)
+    /// ```
+    @JavaStaticMethod
+    public func copyOf<K: AnyJavaObject, V: AnyJavaObject>(_ arg0: Map<K, V>.Entry?) -> Map<K, V>.Entry! where ObjectType == Map<K, V>.Entry
 }

@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.ZoneOffset", implements: TemporalAccessor.self, TemporalAdjuster.self, Comparable<ZoneOffset>.self, Serializable.self)
+@JavaClass("java.time.ZoneOffset", implements: TemporalAccessor.self, TemporalAdjuster.self,  Serializable.self)
 open class ZoneOffset: ZoneId {
   /// Java method `get`.
   ///

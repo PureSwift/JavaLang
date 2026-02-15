@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.nio.file.attribute.FileTime", implements: Comparable<FileTime>.self)
+@JavaClass("java.nio.file.attribute.FileTime")
 open class FileTime: JavaObject {
   /// Java method `equals`.
   ///

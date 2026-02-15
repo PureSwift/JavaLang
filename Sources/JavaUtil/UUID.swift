@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.util.UUID", implements: Serializable.self, Comparable<UUID>.self)
+@JavaClass("java.util.UUID", implements: Serializable.self)
 open class UUID: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: Int64, _ arg1: Int64, environment: JNIEnvironment? = nil)

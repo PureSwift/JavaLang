@@ -4,7 +4,7 @@ import JavaLang
 import SwiftJava
 
 @JavaInterface("java.time.chrono.ChronoLocalDateTime", extends: Temporal.self, TemporalAdjuster.self)
-public struct ChronoLocalDateTime {
+public struct ChronoLocalDateTime<D> {
   /// Java method `equals`.
   ///
   /// ### Java method signature
@@ -319,14 +319,4 @@ public struct ChronoLocalDateTime {
   /// ```
 @JavaMethod
   public func range(_ arg0: TemporalField?) -> ValueRange!
-}
-extension JavaClass {
-  /// Java method `from`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static java.time.chrono.ChronoLocalDateTime<?> java.time.chrono.ChronoLocalDateTime.from(java.time.temporal.TemporalAccessor)
-  /// ```
-@JavaStaticMethod
-  public func from<D: AnyJavaObject>(_ arg0: TemporalAccessor?) -> ChronoLocalDateTime<JavaObject>! where ObjectType == ChronoLocalDateTime<D>
 }

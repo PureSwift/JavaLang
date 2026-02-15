@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.MonthDay", implements: TemporalAccessor.self, TemporalAdjuster.self, Comparable<MonthDay>.self, Serializable.self)
+@JavaClass("java.time.MonthDay", implements: TemporalAccessor.self, TemporalAdjuster.self,  Serializable.self)
 open class MonthDay: JavaObject {
   /// Java method `isValidYear`.
   ///

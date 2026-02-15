@@ -438,7 +438,7 @@ extension JavaClass<Arrays> {
   /// public static <T,U> T[] java.util.Arrays.copyOf(U[],int,java.lang.Class<? extends T[]>)
   /// ```
 @JavaStaticMethod
-  public func copyOf(_ arg0: [U?], _ arg1: Int32, _ arg2: JavaClass<JavaArray>?) -> [T?]
+  public func copyOf<T: AnyJavaObject, U: AnyJavaObject>(_ arg0: [U?], _ arg1: Int32, _ arg2: JavaClass<JavaArray>?) -> [T?]
 
   /// Java method `copyOf`.
   ///
@@ -699,7 +699,7 @@ extension JavaClass<Arrays> {
   /// public static <T,U> T[] java.util.Arrays.copyOfRange(U[],int,int,java.lang.Class<? extends T[]>)
   /// ```
 @JavaStaticMethod
-  public func copyOfRange(_ arg0: [U?], _ arg1: Int32, _ arg2: Int32, _ arg3: JavaClass<JavaArray>?) -> [T?]
+  public func copyOfRange<T: AnyJavaObject, U: AnyJavaObject>(_ arg0: [U?], _ arg1: Int32, _ arg2: Int32, _ arg3: JavaClass<JavaArray>?) -> [T?]
 
   /// Java method `copyOfRange`.
   ///
@@ -1221,7 +1221,7 @@ extension JavaClass<Arrays> {
   /// public static <T> java.util.List<T> java.util.Arrays.asList(T...)
   /// ```
 @JavaStaticMethod
-  public func asList<T: AnyJavaObject>(_ arg0: [T?]) -> List<T>!
+  public func asList<Element: AnyJavaObject>(_ arg0: [Element?]) -> List<Element>!
 
   /// Java method `deepEquals`.
   ///
@@ -1455,7 +1455,7 @@ extension JavaClass<Arrays> {
   /// public static <T> void java.util.Arrays.parallelPrefix(T[],int,int,java.util.function.BinaryOperator<T>)
   /// ```
 @JavaStaticMethod
-  public func parallelPrefix<T: AnyJavaObject>(_ arg0: [T?], _ arg1: Int32, _ arg2: Int32, _ arg3: JavaBinaryOperator<T>?)
+  public func parallelPrefix<Element: AnyJavaObject>(_ arg0: [Element?], _ arg1: Int32, _ arg2: Int32, _ arg3: JavaBinaryOperator<Element>?)
 
   /// Java method `parallelPrefix`.
   ///
@@ -1464,7 +1464,7 @@ extension JavaClass<Arrays> {
   /// public static <T> void java.util.Arrays.parallelPrefix(T[],java.util.function.BinaryOperator<T>)
   /// ```
 @JavaStaticMethod
-  public func parallelPrefix<T: AnyJavaObject>(_ arg0: [T?], _ arg1: JavaBinaryOperator<T>?)
+  public func parallelPrefix<Element: AnyJavaObject>(_ arg0: [Element?], _ arg1: JavaBinaryOperator<Element>?)
 
   /// Java method `binarySearch`.
   ///
@@ -1644,7 +1644,7 @@ extension JavaClass<Arrays> {
   /// public static <T> void java.util.Arrays.setAll(T[],java.util.function.IntFunction<? extends T>)
   /// ```
 @JavaStaticMethod
-  public func setAll<T: AnyJavaObject>(_ arg0: [T?], _ arg1: JavaIntFunction<T>?)
+  public func setAll<Element: AnyJavaObject>(_ arg0: [Element?], _ arg1: JavaIntFunction<Element>?)
 
   /// Java method `parallelSetAll`.
   ///
@@ -1671,7 +1671,7 @@ extension JavaClass<Arrays> {
   /// public static <T> void java.util.Arrays.parallelSetAll(T[],java.util.function.IntFunction<? extends T>)
   /// ```
 @JavaStaticMethod
-  public func parallelSetAll<T: AnyJavaObject>(_ arg0: [T?], _ arg1: JavaIntFunction<T>?)
+  public func parallelSetAll<Element: AnyJavaObject>(_ arg0: [Element?], _ arg1: JavaIntFunction<Element>?)
 
   /// Java method `parallelSetAll`.
   ///

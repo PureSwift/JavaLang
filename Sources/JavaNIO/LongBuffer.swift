@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.nio.LongBuffer", implements: Comparable<LongBuffer>.self)
+@JavaClass("java.nio.LongBuffer")
 open class LongBuffer: Buffer {
   /// Java method `reset`.
   ///

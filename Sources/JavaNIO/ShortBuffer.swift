@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.nio.ShortBuffer", implements: Comparable<ShortBuffer>.self)
+@JavaClass("java.nio.ShortBuffer")
 open class ShortBuffer: Buffer {
   /// Java method `reset`.
   ///

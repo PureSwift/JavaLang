@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.LocalDateTime", implements: Temporal.self, TemporalAdjuster.self, ChronoLocalDateTime<LocalDate>.self, Serializable.self)
+@JavaClass("java.time.LocalDateTime", implements: Temporal.self, TemporalAdjuster.self,  Serializable.self)
 open class LocalDateTime: JavaObject {
   /// Java method `get`.
   ///

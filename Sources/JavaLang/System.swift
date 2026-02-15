@@ -171,7 +171,7 @@ extension JavaClass<System.LoggerFinder> {
 }
 extension JavaClass<System> {
   @JavaStaticField(isFinal: true)
-  public var `in`: InputStream!
+  public var `in`: JavaIO.InputStream!
 
   @JavaStaticField(isFinal: true)
   public var out: PrintStream!
@@ -228,7 +228,7 @@ extension JavaClass<System> {
   public func gc()
 
   @JavaStaticMethod
-  public func setIn(_ arg0: InputStream?)
+  public func setIn(_ arg0: JavaIO.InputStream?)
 
   @JavaStaticMethod
   public func setOut(_ arg0: PrintStream?)

@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.OffsetTime", implements: Temporal.self, TemporalAdjuster.self, Comparable<OffsetTime>.self, Serializable.self)
+@JavaClass("java.time.OffsetTime", implements: Temporal.self, TemporalAdjuster.self,  Serializable.self)
 open class OffsetTime: JavaObject {
   /// Java method `withOffsetSameLocal`.
   ///

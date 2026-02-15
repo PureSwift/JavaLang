@@ -3,8 +3,8 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaInterface("java.time.chrono.ChronoZonedDateTime", extends: Temporal.self, Comparable<ChronoZonedDateTime<JavaObject>>.self)
-public struct ChronoZonedDateTime<D: AnyJavaObject> {
+@JavaInterface("java.time.chrono.ChronoZonedDateTime", extends: Temporal.self)
+public struct ChronoZonedDateTime<D> {
   /// Java method `withEarlierOffsetAtOverlap`.
   ///
   /// ### Java method signature
@@ -364,14 +364,4 @@ public struct ChronoZonedDateTime<D: AnyJavaObject> {
   /// ```
 @JavaMethod
   public func until(_ arg0: Temporal?, _ arg1: TemporalUnit?) -> Int64
-}
-extension JavaClass {
-  /// Java method `from`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public static java.time.chrono.ChronoZonedDateTime<?> java.time.chrono.ChronoZonedDateTime.from(java.time.temporal.TemporalAccessor)
-  /// ```
-@JavaStaticMethod
-  public func from<D: AnyJavaObject>(_ arg0: TemporalAccessor?) -> ChronoZonedDateTime<JavaObject>! where ObjectType == ChronoZonedDateTime<D>
 }

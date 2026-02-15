@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.nio.CharBuffer", implements: Comparable<CharBuffer>.self, Appendable.self, CharSequence.self, Readable.self)
+@JavaClass("java.nio.CharBuffer", implements:  Appendable.self, CharSequence.self, Readable.self)
 open class CharBuffer: Buffer {
   /// Java method `reset`.
   ///

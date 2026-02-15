@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.nio.IntBuffer", implements: Comparable<IntBuffer>.self)
+@JavaClass("java.nio.IntBuffer")
 open class IntBuffer: Buffer {
   /// Java method `reset`.
   ///

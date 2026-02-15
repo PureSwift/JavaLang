@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.util.Random", implements: Random.Generator.self, Serializable.self)
+@JavaClass("java.util.Random", implements: Serializable.self)
 open class Random: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: Int64, environment: JNIEnvironment? = nil)

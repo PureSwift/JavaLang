@@ -4,7 +4,7 @@ import JavaLang
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.Instant", implements: Temporal.self, TemporalAdjuster.self, Comparable<Instant>.self, Serializable.self)
+@JavaClass("java.time.Instant", implements: Temporal.self, TemporalAdjuster.self,  Serializable.self)
 open class Instant: JavaObject {
   /// Java method `get`.
   ///

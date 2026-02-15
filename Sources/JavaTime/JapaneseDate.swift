@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLangIO
 import SwiftJava
 
-@JavaClass("java.time.chrono.JapaneseDate", implements: ChronoLocalDate.self, Serializable.self)
+@JavaClass("java.time.chrono.JapaneseDate", implements:  Serializable.self)
 open class JapaneseDate: JavaObject {
   /// Java method `equals`.
   ///

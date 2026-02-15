@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.nio.FloatBuffer", implements: Comparable<FloatBuffer>.self)
+@JavaClass("java.nio.FloatBuffer")
 open class FloatBuffer: Buffer {
   /// Java method `reset`.
   ///

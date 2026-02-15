@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.nio.DoubleBuffer", implements: Comparable<DoubleBuffer>.self)
+@JavaClass("java.nio.DoubleBuffer")
 open class DoubleBuffer: Buffer {
   /// Java method `reset`.
   ///

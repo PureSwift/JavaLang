@@ -138,7 +138,7 @@ public struct Map<K: AnyJavaObject, V: AnyJavaObject> {
   /// public abstract java.util.Set<java.util.Map$Entry<K, V>> java.util.Map.entrySet()
   /// ```
 @JavaMethod
-  public func entrySet() -> JavaSet<Map.Entry<K, V>>!
+  public func entrySet() -> JavaSet<Map<K, V>.Entry>!
 
   /// Java method `putAll`.
   ///
@@ -346,7 +346,7 @@ extension JavaClass {
   /// public static <K,V> java.util.Map$Entry<K, V> java.util.Map.entry(K,V)
   /// ```
 @JavaStaticMethod
-  public func entry<K: AnyJavaObject, V: AnyJavaObject>(_ arg0: K?, _ arg1: V?) -> Map.Entry<K, V>! where ObjectType == Map<K, V>
+  public func entry<K: AnyJavaObject, V: AnyJavaObject>(_ arg0: K?, _ arg1: V?) -> Map<K, V>.Entry! where ObjectType == Map<K, V>
 
   /// Java method `ofEntries`.
   ///
@@ -355,5 +355,5 @@ extension JavaClass {
   /// public static <K,V> java.util.Map<K, V> java.util.Map.ofEntries(java.util.Map$Entry<? extends K, ? extends V>...)
   /// ```
 @JavaStaticMethod
-  public func ofEntries<K: AnyJavaObject, V: AnyJavaObject>(_ arg0: [Map.Entry<K, V>?]) -> Map<K, V>! where ObjectType == Map<K, V>
+  public func ofEntries<K: AnyJavaObject, V: AnyJavaObject>(_ arg0: [Map<K, V>.Entry?]) -> Map<K, V>! where ObjectType == Map<K, V>
 }

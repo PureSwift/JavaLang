@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import JavaLang
 import SwiftJava
 
-@JavaClass("java.math.BigInteger", implements: Comparable<BigInteger>.self)
+@JavaClass("java.math.BigInteger")
 open class BigInteger: JavaNumber {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, environment: JNIEnvironment? = nil)
