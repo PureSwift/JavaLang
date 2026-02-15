@@ -2,7 +2,6 @@
 import JavaIO
 import SwiftJava
 import JavaUtilFunction
-import CSwiftJavaJNI
 
 @JavaClass("java.nio.channels.Selector", implements: Closeable.self)
 open class Selector: JavaObject {

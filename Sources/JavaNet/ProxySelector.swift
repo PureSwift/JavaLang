@@ -2,7 +2,6 @@
 import JavaIO
 import SwiftJava
 import SwiftJavaNetwork
-import CSwiftJavaJNI
 
 @JavaClass("java.net.ProxySelector")
 open class ProxySelector: JavaObject {

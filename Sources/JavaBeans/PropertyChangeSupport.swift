@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLangIO
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.beans.PropertyChangeSupport", implements: Serializable.self)
 open class PropertyChangeSupport: JavaObject {

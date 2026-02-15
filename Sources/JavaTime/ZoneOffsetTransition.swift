@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.time.zone.ZoneOffsetTransition", implements: Comparable.self, Serializable.self)
 open class ZoneOffsetTransition: JavaObject {

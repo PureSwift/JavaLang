@@ -6,7 +6,6 @@
 //
 
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.lang.Enum")
 open class Enum: JavaObject {

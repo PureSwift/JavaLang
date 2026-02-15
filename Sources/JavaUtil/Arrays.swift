@@ -2,7 +2,6 @@
 import JavaLang
 import SwiftJava
 import SwiftJavaFunction
-import CSwiftJavaJNI
 
 @JavaClass("java.util.Arrays")
 open class Arrays: JavaObject {

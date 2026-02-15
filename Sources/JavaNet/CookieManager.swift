@@ -2,7 +2,6 @@
 import JavaUtil
 import SwiftJava
 import SwiftJavaNetwork
-import CSwiftJavaJNI
 
 @JavaClass("java.net.CookieManager")
 open class CookieManager: CookieHandler {

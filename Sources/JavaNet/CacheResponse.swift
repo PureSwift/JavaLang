@@ -2,7 +2,6 @@
 import JavaIO
 import JavaUtil
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.net.CacheResponse")
 open class CacheResponse: JavaObject {

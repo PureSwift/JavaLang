@@ -3,7 +3,6 @@ import JavaIO
 import JavaLang
 import SwiftJava
 import JavaUtilFunction
-import CSwiftJavaJNI
 
 @JavaInterface("java.nio.file.DirectoryStream", extends: Closeable.self)
 public struct DirectoryStream<T: AnyJavaObject> {

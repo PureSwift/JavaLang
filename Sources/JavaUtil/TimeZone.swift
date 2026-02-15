@@ -3,7 +3,6 @@ import JavaIO
 import JavaLang
 import JavaTime
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.util.TimeZone", implements: Serializable.self, Cloneable.self)
 open class TimeZone: JavaObject {

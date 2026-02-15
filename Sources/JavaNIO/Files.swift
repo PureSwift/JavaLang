@@ -3,7 +3,6 @@ import JavaIO
 import JavaLang
 import SwiftJava
 import JavaUtilFunction
-import CSwiftJavaJNI
 
 @JavaClass("java.nio.file.Files")
 open class Files: JavaObject {

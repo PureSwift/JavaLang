@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.util.UUID", implements: Serializable.self, Comparable.self)
 open class UUID: JavaObject {

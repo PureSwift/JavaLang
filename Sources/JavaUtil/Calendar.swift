@@ -3,7 +3,6 @@ import JavaIO
 import JavaLang
 import JavaTime
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.util.Calendar", implements: Serializable.self, Cloneable.self, Comparable.self)
 open class Calendar: JavaObject {

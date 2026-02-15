@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.util.Locale", implements: Cloneable.self, Serializable.self)
 open class Locale: JavaObject {

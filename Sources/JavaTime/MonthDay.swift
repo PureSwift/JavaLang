@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.time.MonthDay", implements: TemporalAccessor.self, TemporalAdjuster.self, Comparable.self, Serializable.self)
 open class MonthDay: JavaObject {

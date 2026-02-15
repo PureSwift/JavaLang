@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.nio.file.FileSystem", implements: Closeable.self)
 open class FileSystem: JavaObject {

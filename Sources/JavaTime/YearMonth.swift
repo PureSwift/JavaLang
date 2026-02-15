@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import CSwiftJavaJNI
 
 @JavaClass("java.time.YearMonth", implements: Temporal.self, TemporalAdjuster.self, Comparable.self, Serializable.self)
 open class YearMonth: JavaObject {

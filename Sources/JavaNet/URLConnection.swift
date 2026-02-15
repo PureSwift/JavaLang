@@ -3,7 +3,6 @@ import JavaIO
 import JavaUtil
 import SwiftJava
 import SwiftJavaNetwork
-import CSwiftJavaJNI
 
 @JavaClass("java.net.URLConnection")
 open class URLConnection: JavaObject {

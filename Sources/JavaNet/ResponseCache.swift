@@ -2,7 +2,6 @@
 import JavaUtil
 import SwiftJava
 import SwiftJavaNetwork
-import CSwiftJavaJNI
 
 @JavaClass("java.net.ResponseCache")
 open class ResponseCache: JavaObject {

@@ -3,7 +3,6 @@ import JavaIO
 import JavaLang
 import SwiftJava
 import SwiftJavaIO
-import CSwiftJavaJNI
 
 @JavaClass("java.util.Formatter", implements: Closeable.self, Flushable.self)
 open class Formatter: JavaObject {

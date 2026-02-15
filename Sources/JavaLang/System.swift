@@ -2,7 +2,6 @@
 import JavaIO
 import SwiftJava
 import JavaUtilFunction
-import CSwiftJavaJNI
 
 @JavaClass("java.lang.System")
 open class System: JavaObject {
