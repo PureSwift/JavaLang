@@ -2,8 +2,7 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import SwiftJavaCollection
-import SwiftJavaFunction
+import JavaUtilFunction
 import CSwiftJavaJNI
 
 @JavaInterface("java.nio.file.DirectoryStream", extends: Closeable.self)

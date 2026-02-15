@@ -2,7 +2,6 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import SwiftJavaCollection
 import CSwiftJavaJNI
 
 @JavaClass("java.time.Duration", implements: TemporalAmount.self, Comparable.self, Serializable.self)

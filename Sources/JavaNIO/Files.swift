@@ -2,8 +2,7 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import SwiftJavaCollection
-import SwiftJavaFunction
+import JavaUtilFunction
 import CSwiftJavaJNI
 
 @JavaClass("java.nio.file.Files")
