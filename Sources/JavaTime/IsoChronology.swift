@@ -112,7 +112,7 @@ open class IsoChronology: AbstractChronology {
   /// public java.time.chrono.ChronoLocalDateTime java.time.chrono.IsoChronology.localDateTime(java.time.temporal.TemporalAccessor)
   /// ```
 @JavaMethod
-  open func localDateTime(_ arg0: TemporalAccessor?) -> ChronoLocalDateTime!
+  open func localDateTime(_ arg0: TemporalAccessor?) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `localDateTime`.
   ///
@@ -265,7 +265,7 @@ open class IsoChronology: AbstractChronology {
   /// public java.time.chrono.ChronoZonedDateTime java.time.chrono.IsoChronology.zonedDateTime(java.time.Instant,java.time.ZoneId)
   /// ```
 @JavaMethod
-  open func zonedDateTime(_ arg0: Instant?, _ arg1: ZoneId?) -> ChronoZonedDateTime!
+  open func zonedDateTime(_ arg0: Instant?, _ arg1: ZoneId?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `zonedDateTime`.
   ///
@@ -274,7 +274,7 @@ open class IsoChronology: AbstractChronology {
   /// public java.time.chrono.ChronoZonedDateTime java.time.chrono.IsoChronology.zonedDateTime(java.time.temporal.TemporalAccessor)
   /// ```
 @JavaMethod
-  open func zonedDateTime(_ arg0: TemporalAccessor?) -> ChronoZonedDateTime!
+  open func zonedDateTime(_ arg0: TemporalAccessor?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `zonedDateTime`.
   ///

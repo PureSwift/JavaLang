@@ -23,5 +23,5 @@ open class ContentHandler: JavaObject {
     /// public java.lang.Object java.net.ContentHandler.getContent(java.net.URLConnection,java.lang.Class[]) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func getContent(_ arg0: URLConnection?, _ arg1: [JavaClass?]) throws -> JavaObject!
+  open func getContent(_ arg0: URLConnection?, _ arg1: [JavaClass<JavaObject>?]) throws -> JavaObject!
 }
