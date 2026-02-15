@@ -26,6 +26,18 @@ let package = Package(
         .library(
             name: "JavaTime",
             targets: ["JavaTime"]
+        ),
+        .library(
+            name: "JavaLangIO",
+            targets: ["JavaLangIO"]
+        ),
+        .library(
+            name: "JavaLangNet",
+            targets: ["JavaLangNet"]
+        ),
+        .library(
+            name: "JavaLangUtil",
+            targets: ["JavaLangUtil"]
         )
     ],
     dependencies: [
@@ -118,8 +130,28 @@ let package = Package(
                 .product(
                     name: "JavaIO",
                     package: "swift-java"
-                )
+                ),
+                "JavaLangIO"
             ],
+            exclude: ["swift-java.config"],
+            swiftSettings: [
+              .swiftLanguageMode(.v5),
+            ]
+        ),
+        .target(
+            name: "JavaLangIO",
+            dependencies: [
+                .product(
+                    name: "SwiftJava",
+                    package: "swift-java"
+                ),
+                .product(
+                    name: "JavaLangReflect",
+                    package: "swift-java"
+                ),
+                "JavaLang"
+            ],
+            path: "Sources/JavaIO",
             exclude: ["swift-java.config"],
             swiftSettings: [
               .swiftLanguageMode(.v5),
@@ -135,6 +167,28 @@ let package = Package(
               .swiftLanguageMode(.v5),
             ]
         ),
+        .target(
+            name: "JavaLangNet",
+            dependencies: [
+                "JavaLang"
+            ],
+            path: "Sources/JavaNet",
+            exclude: ["swift-java.config"],
+            swiftSettings: [
+              .swiftLanguageMode(.v5),
+            ]
+        ),
+        .target(
+            name: "JavaLangUtil",
+            dependencies: [
+                "JavaLang"
+            ],
+            path: "Sources/JavaUtil",
+            exclude: ["swift-java.config"],
+            swiftSettings: [
+              .swiftLanguageMode(.v5),
+            ]
+        ),
         .testTarget(
             name: "JavaLangTests",
             dependencies: [
@@ -143,3 +197,4 @@ let package = Package(
         )
     ]
 )
+
