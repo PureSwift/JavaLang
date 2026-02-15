@@ -61,7 +61,8 @@ let package = Package(
                 .product(
                     name: "JavaUtilFunction",
                     package: "swift-java"
-                )
+                ),
+                "JavaLangIO"
             ],
             exclude: ["swift-java.config"],
             swiftSettings: [
@@ -148,8 +149,7 @@ let package = Package(
                 .product(
                     name: "JavaLangReflect",
                     package: "swift-java"
-                ),
-                "JavaLang"
+                )
             ],
             path: "Sources/JavaIO",
             exclude: ["swift-java.config"],
