@@ -62,6 +62,10 @@ let package = Package(
                     name: "JavaUtilFunction",
                     package: "swift-java"
                 ),
+                .product(
+                    name: "JavaIO",
+                    package: "swift-java"
+                ),
                 "JavaLangIO"
             ],
             exclude: ["swift-java.config"],
@@ -147,6 +151,10 @@ let package = Package(
                     package: "swift-java"
                 ),
                 .product(
+                    name: "JavaIO",
+                    package: "swift-java"
+                ),
+                .product(
                     name: "JavaLangReflect",
                     package: "swift-java"
                 )
@@ -170,6 +178,10 @@ let package = Package(
         .target(
             name: "JavaLangNet",
             dependencies: [
+                .product(
+                    name: "JavaNet",
+                    package: "swift-java"
+                ),
                 "JavaLang"
             ],
             path: "Sources/JavaNet",
@@ -181,6 +193,10 @@ let package = Package(
         .target(
             name: "JavaLangUtil",
             dependencies: [
+                .product(
+                    name: "JavaUtil",
+                    package: "swift-java"
+                ),
                 "JavaLang"
             ],
             path: "Sources/JavaUtil",
