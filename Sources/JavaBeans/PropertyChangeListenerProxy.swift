@@ -3,7 +3,7 @@ import CSwiftJavaJNI
 import SwiftJava
 
 @JavaClass("java.beans.PropertyChangeListenerProxy", implements: PropertyChangeListener.self)
-open class PropertyChangeListenerProxy: JavaObject<JavaBeans.PropertyChangeListener> {
+open class PropertyChangeListenerProxy: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: PropertyChangeListener?, environment: JNIEnvironment? = nil)
 
