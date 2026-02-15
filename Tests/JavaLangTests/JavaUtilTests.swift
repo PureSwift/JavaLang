@@ -8,17 +8,17 @@
 import Foundation
 import Testing
 import SwiftJava
-@testable import JavaUtil
+@testable import JavaLangUtil
 
 @Suite
 struct JavaUtilTests {
     
     @Test
     func uuid() throws {
-        let javaClass = try JavaClass<JavaUtil.UUID>()
-        let javaObject = try javaClass.randomUUID()
-        let uuidString = try javaObject.toString()
-        let uuid = #require(UUID(uuidString: uuidString))
+        let javaClass = try JavaClass<JavaLangUtil.UUID>()
+        let javaObject = try #require(javaClass.randomUUID())
+        let uuidString = javaObject.toString()
+        let uuid = try #require(UUID(uuidString: uuidString))
         #expect(uuid.uuidString == uuidString)
     }
 }
