@@ -4,15 +4,6 @@ import SwiftJava
 
 @JavaInterface("java.security.cert.PolicyNode")
 public struct PolicyNode {
-  /// Java method `isCritical`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract boolean java.security.cert.PolicyNode.isCritical()
-  /// ```
-@JavaMethod
-  public func isCritical() -> Bool
-
   /// Java method `getDepth`.
   ///
   /// ### Java method signature
@@ -48,6 +39,15 @@ public struct PolicyNode {
   /// ```
 @JavaMethod
   public func getExpectedPolicies() -> JavaSet<JavaString>!
+
+  /// Java method `isCritical`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract boolean java.security.cert.PolicyNode.isCritical()
+  /// ```
+@JavaMethod
+  public func isCritical() -> Bool
 
   /// Java method `getParent`.
   ///

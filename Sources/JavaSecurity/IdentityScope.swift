@@ -10,14 +10,14 @@ open class IdentityScope: Identity {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: IdentityScope?, environment: JNIEnvironment? = nil) throws
 
-    /// Java method `getIdentity`.
+    /// Java method `addIdentity`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public abstract java.security.Identity java.security.IdentityScope.getIdentity(java.lang.String)
+    /// public abstract void java.security.IdentityScope.addIdentity(java.security.Identity) throws java.security.KeyManagementException
     /// ```
   @JavaMethod
-  open func getIdentity(_ arg0: String) -> Identity!
+  open func addIdentity(_ arg0: Identity?) throws
 
     /// Java method `getIdentity`.
     ///
@@ -32,19 +32,19 @@ open class IdentityScope: Identity {
     ///
     /// ### Java method signature
     /// ```java
+    /// public abstract java.security.Identity java.security.IdentityScope.getIdentity(java.lang.String)
+    /// ```
+  @JavaMethod
+  open func getIdentity(_ arg0: String) -> Identity!
+
+    /// Java method `getIdentity`.
+    ///
+    /// ### Java method signature
+    /// ```java
     /// public abstract java.security.Identity java.security.IdentityScope.getIdentity(java.security.PublicKey)
     /// ```
   @JavaMethod
   open func getIdentity(_ arg0: PublicKey?) -> Identity!
-
-    /// Java method `addIdentity`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract void java.security.IdentityScope.addIdentity(java.security.Identity) throws java.security.KeyManagementException
-    /// ```
-  @JavaMethod
-  open func addIdentity(_ arg0: Identity?) throws
 
     /// Java method `removeIdentity`.
     ///

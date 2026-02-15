@@ -7,15 +7,6 @@ open class CertPathBuilderSpi: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `engineBuild`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public abstract java.security.cert.CertPathBuilderResult java.security.cert.CertPathBuilderSpi.engineBuild(java.security.cert.CertPathParameters) throws java.security.cert.CertPathBuilderException,java.security.InvalidAlgorithmParameterException
-    /// ```
-  @JavaMethod
-  open func engineBuild(_ arg0: CertPathParameters?) throws -> CertPathBuilderResult!
-
     /// Java method `engineGetRevocationChecker`.
     ///
     /// ### Java method signature
@@ -24,4 +15,13 @@ open class CertPathBuilderSpi: JavaObject {
     /// ```
   @JavaMethod
   open func engineGetRevocationChecker() -> CertPathChecker!
+
+    /// Java method `engineBuild`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public abstract java.security.cert.CertPathBuilderResult java.security.cert.CertPathBuilderSpi.engineBuild(java.security.cert.CertPathParameters) throws java.security.cert.CertPathBuilderException,java.security.InvalidAlgorithmParameterException
+    /// ```
+  @JavaMethod
+  open func engineBuild(_ arg0: CertPathParameters?) throws -> CertPathBuilderResult!
 }

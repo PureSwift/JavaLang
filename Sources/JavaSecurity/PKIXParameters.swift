@@ -10,15 +10,6 @@ open class PKIXParameters: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: JavaSet<TrustAnchor>?, environment: JNIEnvironment? = nil) throws
 
-    /// Java method `setTargetCertConstraints`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.security.cert.PKIXParameters.setTargetCertConstraints(java.security.cert.CertSelector)
-    /// ```
-  @JavaMethod
-  open func setTargetCertConstraints(_ arg0: CertSelector?)
-
     /// Java method `setTrustAnchors`.
     ///
     /// ### Java method signature
@@ -225,6 +216,15 @@ open class PKIXParameters: JavaObject {
     /// ```
   @JavaMethod
   open func getTargetCertConstraints() -> CertSelector!
+
+    /// Java method `setTargetCertConstraints`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.security.cert.PKIXParameters.setTargetCertConstraints(java.security.cert.CertSelector)
+    /// ```
+  @JavaMethod
+  open func setTargetCertConstraints(_ arg0: CertSelector?)
 
     /// Java method `toString`.
     ///

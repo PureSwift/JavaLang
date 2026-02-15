@@ -7,15 +7,6 @@ open class CertPathValidatorSpi: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `engineGetRevocationChecker`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public java.security.cert.CertPathChecker java.security.cert.CertPathValidatorSpi.engineGetRevocationChecker()
-    /// ```
-  @JavaMethod
-  open func engineGetRevocationChecker() -> CertPathChecker!
-
     /// Java method `engineValidate`.
     ///
     /// ### Java method signature
@@ -24,4 +15,13 @@ open class CertPathValidatorSpi: JavaObject {
     /// ```
   @JavaMethod
   open func engineValidate(_ arg0: CertPath?, _ arg1: CertPathParameters?) throws -> CertPathValidatorResult!
+
+    /// Java method `engineGetRevocationChecker`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.security.cert.CertPathChecker java.security.cert.CertPathValidatorSpi.engineGetRevocationChecker()
+    /// ```
+  @JavaMethod
+  open func engineGetRevocationChecker() -> CertPathChecker!
 }

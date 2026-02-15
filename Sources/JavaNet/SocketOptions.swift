@@ -4,15 +4,6 @@ import SwiftJava
 
 @JavaInterface("java.net.SocketOptions")
 public struct SocketOptions {
-  /// Java method `getOption`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.lang.Object java.net.SocketOptions.getOption(int) throws java.net.SocketException
-  /// ```
-@JavaMethod
-  public func getOption(_ arg0: Int32) throws -> JavaObject!
-
   /// Java method `setOption`.
   ///
   /// ### Java method signature
@@ -21,6 +12,15 @@ public struct SocketOptions {
   /// ```
 @JavaMethod
   public func setOption(_ arg0: Int32, _ arg1: JavaObject?) throws
+
+  /// Java method `getOption`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.lang.Object java.net.SocketOptions.getOption(int) throws java.net.SocketException
+  /// ```
+@JavaMethod
+  public func getOption(_ arg0: Int32) throws -> JavaObject!
 }
 extension JavaClass<SocketOptions> {
   @JavaStaticField(isFinal: true)

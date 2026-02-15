@@ -4,15 +4,6 @@ import SwiftJava
 
 @JavaClass("java.security.cert.X509Certificate", implements: X509Extension.self)
 open class X509Certificate: CertCertificate {
-  /// Java method `getKeyUsage`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract boolean[] java.security.cert.X509Certificate.getKeyUsage()
-  /// ```
-@JavaMethod
-  open func getKeyUsage() -> [Bool]
-
   /// Java method `checkValidity`.
   ///
   /// ### Java method signature
@@ -21,6 +12,15 @@ open class X509Certificate: CertCertificate {
   /// ```
 @JavaMethod
   open func checkValidity() throws
+
+  /// Java method `getKeyUsage`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract boolean[] java.security.cert.X509Certificate.getKeyUsage()
+  /// ```
+@JavaMethod
+  open func getKeyUsage() -> [Bool]
 
   /// Java method `getExtendedKeyUsage`.
   ///

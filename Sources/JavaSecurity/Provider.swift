@@ -14,15 +14,6 @@ open class Provider: JavaObject {
 @JavaMethod
   open func getServices() -> JavaSet<Provider.Service>!
 
-  /// Java method `getService`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.security.Provider$Service java.security.Provider.getService(java.lang.String,java.lang.String)
-  /// ```
-@JavaMethod
-  open func getService(_ arg0: String, _ arg1: String) -> Provider.Service!
-
   /// Java method `getInfo`.
   ///
   /// ### Java method signature
@@ -31,6 +22,15 @@ open class Provider: JavaObject {
   /// ```
 @JavaMethod
   open func getInfo() -> String
+
+  /// Java method `getService`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public java.security.Provider$Service java.security.Provider.getService(java.lang.String,java.lang.String)
+  /// ```
+@JavaMethod
+  open func getService(_ arg0: String, _ arg1: String) -> Provider.Service!
 
   /// Java method `configure`.
   ///

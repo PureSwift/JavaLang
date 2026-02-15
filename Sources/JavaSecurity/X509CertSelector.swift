@@ -7,60 +7,6 @@ open class X509CertSelector: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
-    /// Java method `getKeyUsage`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public boolean[] java.security.cert.X509CertSelector.getKeyUsage()
-    /// ```
-  @JavaMethod
-  open func getKeyUsage() -> [Bool]
-
-    /// Java method `getCertificate`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public java.security.cert.X509Certificate java.security.cert.X509CertSelector.getCertificate()
-    /// ```
-  @JavaMethod
-  open func getCertificate() -> X509Certificate!
-
-    /// Java method `setNameConstraints`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.security.cert.X509CertSelector.setNameConstraints(byte[]) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func setNameConstraints(_ arg0: [Int8]) throws
-
-    /// Java method `getNameConstraints`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public byte[] java.security.cert.X509CertSelector.getNameConstraints()
-    /// ```
-  @JavaMethod
-  open func getNameConstraints() -> [Int8]
-
-    /// Java method `getExtendedKeyUsage`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public java.util.Set<java.lang.String> java.security.cert.X509CertSelector.getExtendedKeyUsage()
-    /// ```
-  @JavaMethod
-  open func getExtendedKeyUsage() -> JavaSet<JavaString>!
-
-    /// Java method `getSubjectAlternativeNames`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public java.util.Collection<java.util.List<?>> java.security.cert.X509CertSelector.getSubjectAlternativeNames()
-    /// ```
-  @JavaMethod
-  open func getSubjectAlternativeNames() -> JavaCollection<List<JavaObject>>!
-
     /// Java method `getIssuerAsString`.
     ///
     /// ### Java method signature
@@ -79,6 +25,15 @@ open class X509CertSelector: JavaObject {
   @JavaMethod
   open func getSubjectAsString() -> String
 
+    /// Java method `getKeyUsage`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public boolean[] java.security.cert.X509CertSelector.getKeyUsage()
+    /// ```
+  @JavaMethod
+  open func getKeyUsage() -> [Bool]
+
     /// Java method `setCertificate`.
     ///
     /// ### Java method signature
@@ -92,19 +47,19 @@ open class X509CertSelector: JavaObject {
     ///
     /// ### Java method signature
     /// ```java
-    /// public void java.security.cert.X509CertSelector.setIssuer(byte[]) throws java.io.IOException
+    /// public void java.security.cert.X509CertSelector.setIssuer(java.lang.String) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func setIssuer(_ arg0: [Int8]) throws
+  open func setIssuer(_ arg0: String) throws
 
     /// Java method `setIssuer`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public void java.security.cert.X509CertSelector.setIssuer(java.lang.String) throws java.io.IOException
+    /// public void java.security.cert.X509CertSelector.setIssuer(byte[]) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func setIssuer(_ arg0: String) throws
+  open func setIssuer(_ arg0: [Int8]) throws
 
     /// Java method `setSubject`.
     ///
@@ -209,19 +164,28 @@ open class X509CertSelector: JavaObject {
     ///
     /// ### Java method signature
     /// ```java
-    /// public void java.security.cert.X509CertSelector.addSubjectAlternativeName(int,java.lang.String) throws java.io.IOException
+    /// public void java.security.cert.X509CertSelector.addSubjectAlternativeName(int,byte[]) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func addSubjectAlternativeName(_ arg0: Int32, _ arg1: String) throws
+  open func addSubjectAlternativeName(_ arg0: Int32, _ arg1: [Int8]) throws
 
     /// Java method `addSubjectAlternativeName`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public void java.security.cert.X509CertSelector.addSubjectAlternativeName(int,byte[]) throws java.io.IOException
+    /// public void java.security.cert.X509CertSelector.addSubjectAlternativeName(int,java.lang.String) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func addSubjectAlternativeName(_ arg0: Int32, _ arg1: [Int8]) throws
+  open func addSubjectAlternativeName(_ arg0: Int32, _ arg1: String) throws
+
+    /// Java method `setNameConstraints`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.security.cert.X509CertSelector.setNameConstraints(byte[]) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func setNameConstraints(_ arg0: [Int8]) throws
 
     /// Java method `setBasicConstraints`.
     ///
@@ -267,6 +231,15 @@ open class X509CertSelector: JavaObject {
     /// ```
   @JavaMethod
   open func addPathToName(_ arg0: Int32, _ arg1: String) throws
+
+    /// Java method `getCertificate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.security.cert.X509Certificate java.security.cert.X509CertSelector.getCertificate()
+    /// ```
+  @JavaMethod
+  open func getCertificate() -> X509Certificate!
 
     /// Java method `getIssuerAsBytes`.
     ///
@@ -322,6 +295,15 @@ open class X509CertSelector: JavaObject {
   @JavaMethod
   open func getSubjectPublicKey() -> PublicKey!
 
+    /// Java method `getExtendedKeyUsage`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.util.Set<java.lang.String> java.security.cert.X509CertSelector.getExtendedKeyUsage()
+    /// ```
+  @JavaMethod
+  open func getExtendedKeyUsage() -> JavaSet<JavaString>!
+
     /// Java method `getMatchAllSubjectAltNames`.
     ///
     /// ### Java method signature
@@ -330,6 +312,24 @@ open class X509CertSelector: JavaObject {
     /// ```
   @JavaMethod
   open func getMatchAllSubjectAltNames() -> Bool
+
+    /// Java method `getSubjectAlternativeNames`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.util.Collection<java.util.List<?>> java.security.cert.X509CertSelector.getSubjectAlternativeNames()
+    /// ```
+  @JavaMethod
+  open func getSubjectAlternativeNames() -> JavaCollection<List<JavaObject>>!
+
+    /// Java method `getNameConstraints`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public byte[] java.security.cert.X509CertSelector.getNameConstraints()
+    /// ```
+  @JavaMethod
+  open func getNameConstraints() -> [Int8]
 
     /// Java method `getPathToNames`.
     ///

@@ -6,15 +6,6 @@ import SwiftJava
 
 @JavaClass("java.time.zone.ZoneOffsetTransition", implements: Comparable<ZoneOffsetTransition>.self, Serializable.self)
 open class ZoneOffsetTransition: JavaObject {
-  /// Java method `isOverlap`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public boolean java.time.zone.ZoneOffsetTransition.isOverlap()
-  /// ```
-@JavaMethod
-  open func isOverlap() -> Bool
-
   /// Java method `getInstant`.
   ///
   /// ### Java method signature
@@ -23,6 +14,15 @@ open class ZoneOffsetTransition: JavaObject {
   /// ```
 @JavaMethod
   open func getInstant() -> Instant!
+
+  /// Java method `isOverlap`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public boolean java.time.zone.ZoneOffsetTransition.isOverlap()
+  /// ```
+@JavaMethod
+  open func isOverlap() -> Bool
 
   /// Java method `equals`.
   ///

@@ -13,6 +13,24 @@ extension JavaClass<IDN> {
   @JavaStaticField(isFinal: true)
   public var USE_STD3_ASCII_RULES: Int32
 
+    /// Java method `toUnicode`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static java.lang.String java.net.IDN.toUnicode(java.lang.String,int)
+    /// ```
+  @JavaStaticMethod
+  public func toUnicode(_ arg0: String, _ arg1: Int32) -> String
+
+    /// Java method `toUnicode`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public static java.lang.String java.net.IDN.toUnicode(java.lang.String)
+    /// ```
+  @JavaStaticMethod
+  public func toUnicode(_ arg0: String) -> String
+
     /// Java method `toASCII`.
     ///
     /// ### Java method signature
@@ -30,22 +48,4 @@ extension JavaClass<IDN> {
     /// ```
   @JavaStaticMethod
   public func toASCII(_ arg0: String) -> String
-
-    /// Java method `toUnicode`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public static java.lang.String java.net.IDN.toUnicode(java.lang.String)
-    /// ```
-  @JavaStaticMethod
-  public func toUnicode(_ arg0: String) -> String
-
-    /// Java method `toUnicode`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public static java.lang.String java.net.IDN.toUnicode(java.lang.String,int)
-    /// ```
-  @JavaStaticMethod
-  public func toUnicode(_ arg0: String, _ arg1: Int32) -> String
 }

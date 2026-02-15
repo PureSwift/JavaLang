@@ -4,15 +4,6 @@ import SwiftJava
 
 @JavaClass("java.nio.channels.spi.AsynchronousChannelProvider")
 open class AsynchronousChannelProvider: JavaObject {
-  /// Java method `openAsynchronousServerSocketChannel`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.nio.channels.AsynchronousServerSocketChannel java.nio.channels.spi.AsynchronousChannelProvider.openAsynchronousServerSocketChannel(java.nio.channels.AsynchronousChannelGroup) throws java.io.IOException
-  /// ```
-@JavaMethod
-  open func openAsynchronousServerSocketChannel(_ arg0: AsynchronousChannelGroup?) throws -> AsynchronousServerSocketChannel!
-
   /// Java method `openAsynchronousSocketChannel`.
   ///
   /// ### Java method signature
@@ -21,6 +12,15 @@ open class AsynchronousChannelProvider: JavaObject {
   /// ```
 @JavaMethod
   open func openAsynchronousSocketChannel(_ arg0: AsynchronousChannelGroup?) throws -> AsynchronousSocketChannel!
+
+  /// Java method `openAsynchronousServerSocketChannel`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.nio.channels.AsynchronousServerSocketChannel java.nio.channels.spi.AsynchronousChannelProvider.openAsynchronousServerSocketChannel(java.nio.channels.AsynchronousChannelGroup) throws java.io.IOException
+  /// ```
+@JavaMethod
+  open func openAsynchronousServerSocketChannel(_ arg0: AsynchronousChannelGroup?) throws -> AsynchronousServerSocketChannel!
 }
 extension JavaClass<AsynchronousChannelProvider> {
   /// Java method `provider`.

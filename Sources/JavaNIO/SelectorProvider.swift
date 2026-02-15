@@ -4,23 +4,14 @@ import SwiftJava
 
 @JavaClass("java.nio.channels.spi.SelectorProvider")
 open class SelectorProvider: JavaObject {
-  /// Java method `openDatagramChannel`.
+  /// Java method `openSocketChannel`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public abstract java.nio.channels.DatagramChannel java.nio.channels.spi.SelectorProvider.openDatagramChannel() throws java.io.IOException
+  /// public abstract java.nio.channels.SocketChannel java.nio.channels.spi.SelectorProvider.openSocketChannel() throws java.io.IOException
   /// ```
 @JavaMethod
-  open func openDatagramChannel() throws -> DatagramChannel!
-
-  /// Java method `openPipe`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.nio.channels.Pipe java.nio.channels.spi.SelectorProvider.openPipe() throws java.io.IOException
-  /// ```
-@JavaMethod
-  open func openPipe() throws -> Pipe!
+  open func openSocketChannel() throws -> SocketChannel!
 
   /// Java method `openSelector`.
   ///
@@ -40,14 +31,23 @@ open class SelectorProvider: JavaObject {
 @JavaMethod
   open func openServerSocketChannel() throws -> ServerSocketChannel!
 
-  /// Java method `openSocketChannel`.
+  /// Java method `openDatagramChannel`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public abstract java.nio.channels.SocketChannel java.nio.channels.spi.SelectorProvider.openSocketChannel() throws java.io.IOException
+  /// public abstract java.nio.channels.DatagramChannel java.nio.channels.spi.SelectorProvider.openDatagramChannel() throws java.io.IOException
   /// ```
 @JavaMethod
-  open func openSocketChannel() throws -> SocketChannel!
+  open func openDatagramChannel() throws -> DatagramChannel!
+
+  /// Java method `openPipe`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.nio.channels.Pipe java.nio.channels.spi.SelectorProvider.openPipe() throws java.io.IOException
+  /// ```
+@JavaMethod
+  open func openPipe() throws -> Pipe!
 
   /// Java method `inheritedChannel`.
   ///

@@ -19,15 +19,6 @@ open class StreamTokenizer: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: Reader?, environment: JNIEnvironment? = nil)
 
-    /// Java method `pushBack`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.io.StreamTokenizer.pushBack()
-    /// ```
-  @JavaMethod
-  open func pushBack()
-
     /// Java method `wordChars`.
     ///
     /// ### Java method signature
@@ -135,6 +126,15 @@ open class StreamTokenizer: JavaObject {
     /// ```
   @JavaMethod
   open func lowerCaseMode(_ arg0: Bool)
+
+    /// Java method `pushBack`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.io.StreamTokenizer.pushBack()
+    /// ```
+  @JavaMethod
+  open func pushBack()
 
     /// Java method `lineno`.
     ///

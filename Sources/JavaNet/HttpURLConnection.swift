@@ -32,6 +32,15 @@ open class HttpURLConnection: URLConnection {
 @JavaMethod
   open override func getHeaderFieldKey(_ arg0: Int32) -> String
 
+  /// Java method `disconnect`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract void java.net.HttpURLConnection.disconnect()
+  /// ```
+@JavaMethod
+  open func disconnect()
+
   /// Java method `setAuthenticator`.
   ///
   /// ### Java method signature
@@ -103,15 +112,6 @@ open class HttpURLConnection: URLConnection {
   /// ```
 @JavaMethod
   open func getResponseMessage() throws -> String
-
-  /// Java method `disconnect`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract void java.net.HttpURLConnection.disconnect()
-  /// ```
-@JavaMethod
-  open func disconnect()
 
   /// Java method `usingProxy`.
   ///

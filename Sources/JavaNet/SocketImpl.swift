@@ -44,15 +44,6 @@ open class SocketImpl: JavaObject {
   @JavaMethod
   open func getOutputStream() throws -> OutputStream!
 
-    /// Java method `getInetAddress`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected java.net.InetAddress java.net.SocketImpl.getInetAddress()
-    /// ```
-  @JavaMethod
-  open func getInetAddress() -> InetAddress!
-
     /// Java method `getLocalPort`.
     ///
     /// ### Java method signature
@@ -62,14 +53,14 @@ open class SocketImpl: JavaObject {
   @JavaMethod
   open func getLocalPort() -> Int32
 
-    /// Java method `getOption`.
+    /// Java method `getFileDescriptor`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected <T> T java.net.SocketImpl.getOption(java.net.SocketOption<T>) throws java.io.IOException
+    /// protected java.io.FileDescriptor java.net.SocketImpl.getFileDescriptor()
     /// ```
-  @JavaMethod(typeErasedResult: "T!")
-  open func getOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?) throws -> T!
+  @JavaMethod
+  open func getFileDescriptor() -> FileDescriptor!
 
     /// Java method `setOption`.
     ///
@@ -80,41 +71,32 @@ open class SocketImpl: JavaObject {
   @JavaMethod
   open func setOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?, _ arg1: T?) throws
 
-    /// Java method `listen`.
+    /// Java method `getOption`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected abstract void java.net.SocketImpl.listen(int) throws java.io.IOException
+    /// protected <T> T java.net.SocketImpl.getOption(java.net.SocketOption<T>) throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func listen(_ arg0: Int32) throws
+  @JavaMethod(typeErasedResult: "T!")
+  open func getOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?) throws -> T!
 
-    /// Java method `shutdownInput`.
+    /// Java method `supportedOptions`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected void java.net.SocketImpl.shutdownInput() throws java.io.IOException
+    /// protected java.util.Set<java.net.SocketOption<?>> java.net.SocketImpl.supportedOptions()
     /// ```
   @JavaMethod
-  open func shutdownInput() throws
+  open func supportedOptions() -> JavaSet<SocketOption<JavaObject>>!
 
-    /// Java method `shutdownOutput`.
+    /// Java method `getInetAddress`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected void java.net.SocketImpl.shutdownOutput() throws java.io.IOException
+    /// protected java.net.InetAddress java.net.SocketImpl.getInetAddress()
     /// ```
   @JavaMethod
-  open func shutdownOutput() throws
-
-    /// Java method `getFileDescriptor`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected java.io.FileDescriptor java.net.SocketImpl.getFileDescriptor()
-    /// ```
-  @JavaMethod
-  open func getFileDescriptor() -> FileDescriptor!
+  open func getInetAddress() -> InetAddress!
 
     /// Java method `supportsUrgentData`.
     ///
@@ -134,6 +116,24 @@ open class SocketImpl: JavaObject {
   @JavaMethod
   open func sendUrgentData(_ arg0: Int32) throws
 
+    /// Java method `shutdownInput`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected void java.net.SocketImpl.shutdownInput() throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func shutdownInput() throws
+
+    /// Java method `shutdownOutput`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected void java.net.SocketImpl.shutdownOutput() throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func shutdownOutput() throws
+
     /// Java method `setPerformancePreferences`.
     ///
     /// ### Java method signature
@@ -143,14 +143,14 @@ open class SocketImpl: JavaObject {
   @JavaMethod
   open func setPerformancePreferences(_ arg0: Int32, _ arg1: Int32, _ arg2: Int32)
 
-    /// Java method `supportedOptions`.
+    /// Java method `listen`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected java.util.Set<java.net.SocketOption<?>> java.net.SocketImpl.supportedOptions()
+    /// protected abstract void java.net.SocketImpl.listen(int) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func supportedOptions() -> JavaSet<SocketOption<JavaObject>>!
+  open func listen(_ arg0: Int32) throws
 
     /// Java method `toString`.
     ///

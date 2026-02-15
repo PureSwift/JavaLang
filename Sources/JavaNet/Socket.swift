@@ -6,28 +6,28 @@ import SwiftJava
 @JavaClass("java.net.Socket", implements: Closeable.self)
 open class Socket: JavaObject {
   @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: Int32, _ arg2: InetAddress?, _ arg3: Int32, environment: JNIEnvironment? = nil) throws
-
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: InetAddress?, _ arg1: Int32, _ arg2: Bool, environment: JNIEnvironment? = nil) throws
+  @_nonoverride public convenience init(_ arg0: String, _ arg1: Int32, environment: JNIEnvironment? = nil) throws
 
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: Int32, _ arg2: Bool, environment: JNIEnvironment? = nil) throws
 
   @JavaMethod
+  @_nonoverride public convenience init(_ arg0: InetAddress?, _ arg1: Int32, environment: JNIEnvironment? = nil) throws
+
+  @JavaMethod
   @_nonoverride public convenience init(_ arg0: InetAddress?, _ arg1: Int32, _ arg2: InetAddress?, _ arg3: Int32, environment: JNIEnvironment? = nil) throws
 
   @JavaMethod
-  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+  @_nonoverride public convenience init(_ arg0: String, _ arg1: Int32, _ arg2: InetAddress?, _ arg3: Int32, environment: JNIEnvironment? = nil) throws
 
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: Proxy?, environment: JNIEnvironment? = nil)
 
   @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: Int32, environment: JNIEnvironment? = nil) throws
+  @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
   @JavaMethod
-  @_nonoverride public convenience init(_ arg0: InetAddress?, _ arg1: Int32, environment: JNIEnvironment? = nil) throws
+  @_nonoverride public convenience init(_ arg0: InetAddress?, _ arg1: Int32, _ arg2: Bool, environment: JNIEnvironment? = nil) throws
 
     /// Java method `connect`.
     ///
@@ -56,15 +56,6 @@ open class Socket: JavaObject {
   @JavaMethod
   open func getOutputStream() throws -> OutputStream!
 
-    /// Java method `getInetAddress`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public java.net.InetAddress java.net.Socket.getInetAddress()
-    /// ```
-  @JavaMethod
-  open func getInetAddress() -> InetAddress!
-
     /// Java method `getLocalPort`.
     ///
     /// ### Java method signature
@@ -73,15 +64,6 @@ open class Socket: JavaObject {
     /// ```
   @JavaMethod
   open func getLocalPort() -> Int32
-
-    /// Java method `getOption`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public <T> T java.net.Socket.getOption(java.net.SocketOption<T>) throws java.io.IOException
-    /// ```
-  @JavaMethod(typeErasedResult: "T!")
-  open func getOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?) throws -> T!
 
     /// Java method `setOption`.
     ///
@@ -92,41 +74,14 @@ open class Socket: JavaObject {
   @JavaMethod
   open func setOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?, _ arg1: T?) throws -> Socket!
 
-    /// Java method `shutdownInput`.
+    /// Java method `getOption`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public void java.net.Socket.shutdownInput() throws java.io.IOException
+    /// public <T> T java.net.Socket.getOption(java.net.SocketOption<T>) throws java.io.IOException
     /// ```
-  @JavaMethod
-  open func shutdownInput() throws
-
-    /// Java method `shutdownOutput`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.shutdownOutput() throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func shutdownOutput() throws
-
-    /// Java method `sendUrgentData`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.sendUrgentData(int) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func sendUrgentData(_ arg0: Int32) throws
-
-    /// Java method `setPerformancePreferences`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.setPerformancePreferences(int,int,int)
-    /// ```
-  @JavaMethod
-  open func setPerformancePreferences(_ arg0: Int32, _ arg1: Int32, _ arg2: Int32)
+  @JavaMethod(typeErasedResult: "T!")
+  open func getOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?) throws -> T!
 
     /// Java method `supportedOptions`.
     ///
@@ -146,78 +101,6 @@ open class Socket: JavaObject {
   @JavaMethod
   open func isClosed() -> Bool
 
-    /// Java method `isBound`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public boolean java.net.Socket.isBound()
-    /// ```
-  @JavaMethod
-  open func isBound() -> Bool
-
-    /// Java method `getLocalSocketAddress`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public java.net.SocketAddress java.net.Socket.getLocalSocketAddress()
-    /// ```
-  @JavaMethod
-  open func getLocalSocketAddress() -> SocketAddress!
-
-    /// Java method `setSoTimeout`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.setSoTimeout(int) throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func setSoTimeout(_ arg0: Int32) throws
-
-    /// Java method `getSoTimeout`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public int java.net.Socket.getSoTimeout() throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func getSoTimeout() throws -> Int32
-
-    /// Java method `setReuseAddress`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.setReuseAddress(boolean) throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func setReuseAddress(_ arg0: Bool) throws
-
-    /// Java method `getReuseAddress`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public boolean java.net.Socket.getReuseAddress() throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func getReuseAddress() throws -> Bool
-
-    /// Java method `setReceiveBufferSize`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.setReceiveBufferSize(int) throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func setReceiveBufferSize(_ arg0: Int32) throws
-
-    /// Java method `getReceiveBufferSize`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public int java.net.Socket.getReceiveBufferSize() throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func getReceiveBufferSize() throws -> Int32
-
     /// Java method `isConnected`.
     ///
     /// ### Java method signature
@@ -227,14 +110,23 @@ open class Socket: JavaObject {
   @JavaMethod
   open func isConnected() -> Bool
 
-    /// Java method `getRemoteSocketAddress`.
+    /// Java method `isBound`.
     ///
     /// ### Java method signature
     /// ```java
-    /// public java.net.SocketAddress java.net.Socket.getRemoteSocketAddress()
+    /// public boolean java.net.Socket.isBound()
     /// ```
   @JavaMethod
-  open func getRemoteSocketAddress() -> SocketAddress!
+  open func isBound() -> Bool
+
+    /// Java method `getInetAddress`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.net.InetAddress java.net.Socket.getInetAddress()
+    /// ```
+  @JavaMethod
+  open func getInetAddress() -> InetAddress!
 
     /// Java method `getLocalAddress`.
     ///
@@ -244,42 +136,6 @@ open class Socket: JavaObject {
     /// ```
   @JavaMethod
   open func getLocalAddress() -> InetAddress!
-
-    /// Java method `setSendBufferSize`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.setSendBufferSize(int) throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func setSendBufferSize(_ arg0: Int32) throws
-
-    /// Java method `getSendBufferSize`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public int java.net.Socket.getSendBufferSize() throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func getSendBufferSize() throws -> Int32
-
-    /// Java method `setTrafficClass`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.Socket.setTrafficClass(int) throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func setTrafficClass(_ arg0: Int32) throws
-
-    /// Java method `getTrafficClass`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public int java.net.Socket.getTrafficClass() throws java.net.SocketException
-    /// ```
-  @JavaMethod
-  open func getTrafficClass() throws -> Int32
 
     /// Java method `isInputShutdown`.
     ///
@@ -298,6 +154,51 @@ open class Socket: JavaObject {
     /// ```
   @JavaMethod
   open func isOutputShutdown() -> Bool
+
+    /// Java method `sendUrgentData`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.sendUrgentData(int) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func sendUrgentData(_ arg0: Int32) throws
+
+    /// Java method `shutdownInput`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.shutdownInput() throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func shutdownInput() throws
+
+    /// Java method `shutdownOutput`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.shutdownOutput() throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func shutdownOutput() throws
+
+    /// Java method `getRemoteSocketAddress`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.net.SocketAddress java.net.Socket.getRemoteSocketAddress()
+    /// ```
+  @JavaMethod
+  open func getRemoteSocketAddress() -> SocketAddress!
+
+    /// Java method `getLocalSocketAddress`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.net.SocketAddress java.net.Socket.getLocalSocketAddress()
+    /// ```
+  @JavaMethod
+  open func getLocalSocketAddress() -> SocketAddress!
 
     /// Java method `setTcpNoDelay`.
     ///
@@ -353,6 +254,60 @@ open class Socket: JavaObject {
   @JavaMethod
   open func getOOBInline() throws -> Bool
 
+    /// Java method `setSoTimeout`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.setSoTimeout(int) throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func setSoTimeout(_ arg0: Int32) throws
+
+    /// Java method `getSoTimeout`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int java.net.Socket.getSoTimeout() throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func getSoTimeout() throws -> Int32
+
+    /// Java method `setSendBufferSize`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.setSendBufferSize(int) throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func setSendBufferSize(_ arg0: Int32) throws
+
+    /// Java method `getSendBufferSize`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int java.net.Socket.getSendBufferSize() throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func getSendBufferSize() throws -> Int32
+
+    /// Java method `setReceiveBufferSize`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.setReceiveBufferSize(int) throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func setReceiveBufferSize(_ arg0: Int32) throws
+
+    /// Java method `getReceiveBufferSize`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int java.net.Socket.getReceiveBufferSize() throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func getReceiveBufferSize() throws -> Int32
+
     /// Java method `setKeepAlive`.
     ///
     /// ### Java method signature
@@ -370,6 +325,51 @@ open class Socket: JavaObject {
     /// ```
   @JavaMethod
   open func getKeepAlive() throws -> Bool
+
+    /// Java method `setTrafficClass`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.setTrafficClass(int) throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func setTrafficClass(_ arg0: Int32) throws
+
+    /// Java method `getTrafficClass`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int java.net.Socket.getTrafficClass() throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func getTrafficClass() throws -> Int32
+
+    /// Java method `setReuseAddress`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.setReuseAddress(boolean) throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func setReuseAddress(_ arg0: Bool) throws
+
+    /// Java method `getReuseAddress`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public boolean java.net.Socket.getReuseAddress() throws java.net.SocketException
+    /// ```
+  @JavaMethod
+  open func getReuseAddress() throws -> Bool
+
+    /// Java method `setPerformancePreferences`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.Socket.setPerformancePreferences(int,int,int)
+    /// ```
+  @JavaMethod
+  open func setPerformancePreferences(_ arg0: Int32, _ arg1: Int32, _ arg2: Int32)
 
     /// Java method `toString`.
     ///

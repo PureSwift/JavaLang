@@ -10,6 +10,15 @@ open class TrustAnchor: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: PublicKey?, _ arg2: [Int8], environment: JNIEnvironment? = nil)
 
+    /// Java method `getNameConstraints`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final byte[] java.security.cert.TrustAnchor.getNameConstraints()
+    /// ```
+  @JavaMethod
+  open func getNameConstraints() -> [Int8]
+
     /// Java method `getTrustedCert`.
     ///
     /// ### Java method signature
@@ -36,15 +45,6 @@ open class TrustAnchor: JavaObject {
     /// ```
   @JavaMethod
   open func getCAPublicKey() -> PublicKey!
-
-    /// Java method `getNameConstraints`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final byte[] java.security.cert.TrustAnchor.getNameConstraints()
-    /// ```
-  @JavaMethod
-  open func getNameConstraints() -> [Int8]
 
     /// Java method `toString`.
     ///

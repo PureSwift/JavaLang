@@ -22,42 +22,6 @@ open class MulticastSocket: DatagramSocket {
   @JavaMethod
   open func send(_ arg0: DatagramPacket?, _ arg1: Int8) throws
 
-    /// Java method `joinGroup`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.MulticastSocket.joinGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open override func joinGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
-
-    /// Java method `joinGroup`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.MulticastSocket.joinGroup(java.net.InetAddress) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func joinGroup(_ arg0: InetAddress?) throws
-
-    /// Java method `leaveGroup`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.MulticastSocket.leaveGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open override func leaveGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
-
-    /// Java method `leaveGroup`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.net.MulticastSocket.leaveGroup(java.net.InetAddress) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func leaveGroup(_ arg0: InetAddress?) throws
-
     /// Java method `setTTL`.
     ///
     /// ### Java method signature
@@ -84,6 +48,42 @@ open class MulticastSocket: DatagramSocket {
     /// ```
   @JavaMethod
   open func setTimeToLive(_ arg0: Int32) throws
+
+    /// Java method `joinGroup`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.MulticastSocket.joinGroup(java.net.InetAddress) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func joinGroup(_ arg0: InetAddress?) throws
+
+    /// Java method `joinGroup`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.MulticastSocket.joinGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open override func joinGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
+
+    /// Java method `leaveGroup`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.MulticastSocket.leaveGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open override func leaveGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
+
+    /// Java method `leaveGroup`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.net.MulticastSocket.leaveGroup(java.net.InetAddress) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func leaveGroup(_ arg0: InetAddress?) throws
 
     /// Java method `setInterface`.
     ///

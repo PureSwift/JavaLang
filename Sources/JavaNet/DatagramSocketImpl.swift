@@ -17,50 +17,14 @@ open class DatagramSocketImpl: JavaObject {
   @JavaMethod
   open func connect(_ arg0: InetAddress?, _ arg1: Int32) throws
 
-    /// Java method `getLocalPort`.
+    /// Java method `send`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected int java.net.DatagramSocketImpl.getLocalPort()
+    /// protected abstract void java.net.DatagramSocketImpl.send(java.net.DatagramPacket) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func getLocalPort() -> Int32
-
-    /// Java method `getOption`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected <T> T java.net.DatagramSocketImpl.getOption(java.net.SocketOption<T>) throws java.io.IOException
-    /// ```
-  @JavaMethod(typeErasedResult: "T!")
-  open func getOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?) throws -> T!
-
-    /// Java method `setOption`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected <T> void java.net.DatagramSocketImpl.setOption(java.net.SocketOption<T>,T) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func setOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?, _ arg1: T?) throws
-
-    /// Java method `getFileDescriptor`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected java.io.FileDescriptor java.net.DatagramSocketImpl.getFileDescriptor()
-    /// ```
-  @JavaMethod
-  open func getFileDescriptor() -> FileDescriptor!
-
-    /// Java method `supportedOptions`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected java.util.Set<java.net.SocketOption<?>> java.net.DatagramSocketImpl.supportedOptions()
-    /// ```
-  @JavaMethod
-  open func supportedOptions() -> JavaSet<SocketOption<JavaObject>>!
+  open func send(_ arg0: DatagramPacket?) throws
 
     /// Java method `disconnect`.
     ///
@@ -71,14 +35,14 @@ open class DatagramSocketImpl: JavaObject {
   @JavaMethod
   open func disconnect()
 
-    /// Java method `send`.
+    /// Java method `peekData`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected abstract void java.net.DatagramSocketImpl.send(java.net.DatagramPacket) throws java.io.IOException
+    /// protected abstract int java.net.DatagramSocketImpl.peekData(java.net.DatagramPacket) throws java.io.IOException
     /// ```
   @JavaMethod
-  open func send(_ arg0: DatagramPacket?) throws
+  open func peekData(_ arg0: DatagramPacket?) throws -> Int32
 
     /// Java method `receive`.
     ///
@@ -88,33 +52,6 @@ open class DatagramSocketImpl: JavaObject {
     /// ```
   @JavaMethod
   open func receive(_ arg0: DatagramPacket?) throws
-
-    /// Java method `joinGroup`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected abstract void java.net.DatagramSocketImpl.joinGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func joinGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
-
-    /// Java method `leaveGroup`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected abstract void java.net.DatagramSocketImpl.leaveGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func leaveGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
-
-    /// Java method `peekData`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected abstract int java.net.DatagramSocketImpl.peekData(java.net.DatagramPacket) throws java.io.IOException
-    /// ```
-  @JavaMethod
-  open func peekData(_ arg0: DatagramPacket?) throws -> Int32
 
     /// Java method `setTTL`.
     ///
@@ -151,6 +88,69 @@ open class DatagramSocketImpl: JavaObject {
     /// ```
   @JavaMethod
   open func leave(_ arg0: InetAddress?) throws
+
+    /// Java method `joinGroup`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected abstract void java.net.DatagramSocketImpl.joinGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func joinGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
+
+    /// Java method `leaveGroup`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected abstract void java.net.DatagramSocketImpl.leaveGroup(java.net.SocketAddress,java.net.NetworkInterface) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func leaveGroup(_ arg0: SocketAddress?, _ arg1: NetworkInterface?) throws
+
+    /// Java method `getLocalPort`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected int java.net.DatagramSocketImpl.getLocalPort()
+    /// ```
+  @JavaMethod
+  open func getLocalPort() -> Int32
+
+    /// Java method `getFileDescriptor`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected java.io.FileDescriptor java.net.DatagramSocketImpl.getFileDescriptor()
+    /// ```
+  @JavaMethod
+  open func getFileDescriptor() -> FileDescriptor!
+
+    /// Java method `setOption`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected <T> void java.net.DatagramSocketImpl.setOption(java.net.SocketOption<T>,T) throws java.io.IOException
+    /// ```
+  @JavaMethod
+  open func setOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?, _ arg1: T?) throws
+
+    /// Java method `getOption`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected <T> T java.net.DatagramSocketImpl.getOption(java.net.SocketOption<T>) throws java.io.IOException
+    /// ```
+  @JavaMethod(typeErasedResult: "T!")
+  open func getOption<T: AnyJavaObject>(_ arg0: SocketOption<T>?) throws -> T!
+
+    /// Java method `supportedOptions`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected java.util.Set<java.net.SocketOption<?>> java.net.DatagramSocketImpl.supportedOptions()
+    /// ```
+  @JavaMethod
+  open func supportedOptions() -> JavaSet<SocketOption<JavaObject>>!
 
     /// Java method `join`.
     ///

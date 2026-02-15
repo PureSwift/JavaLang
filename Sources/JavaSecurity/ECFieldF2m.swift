@@ -10,15 +10,6 @@ open class ECFieldF2m: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: Int32, _ arg1: [Int32], environment: JNIEnvironment? = nil)
 
-    /// Java method `getM`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public int java.security.spec.ECFieldF2m.getM()
-    /// ```
-  @JavaMethod
-  open func getM() -> Int32
-
     /// Java method `getFieldSize`.
     ///
     /// ### Java method signature
@@ -27,6 +18,15 @@ open class ECFieldF2m: JavaObject {
     /// ```
   @JavaMethod
   open func getFieldSize() -> Int32
+
+    /// Java method `getM`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public int java.security.spec.ECFieldF2m.getM()
+    /// ```
+  @JavaMethod
+  open func getM() -> Int32
 
     /// Java method `getMidTermsOfReductionPolynomial`.
     ///

@@ -7,6 +7,33 @@ open class SignatureSpi: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
+    /// Java method `engineGetParameters`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected java.security.AlgorithmParameters java.security.SignatureSpi.engineGetParameters()
+    /// ```
+  @JavaMethod
+  open func engineGetParameters() -> AlgorithmParameters!
+
+    /// Java method `engineSetParameter`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected void java.security.SignatureSpi.engineSetParameter(java.security.spec.AlgorithmParameterSpec) throws java.security.InvalidAlgorithmParameterException
+    /// ```
+  @JavaMethod
+  open func engineSetParameter(_ arg0: AlgorithmParameterSpec?) throws
+
+    /// Java method `engineSetParameter`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected abstract void java.security.SignatureSpi.engineSetParameter(java.lang.String,java.lang.Object) throws java.security.InvalidParameterException
+    /// ```
+  @JavaMethod
+  open func engineSetParameter(_ arg0: String, _ arg1: JavaObject?) throws
+
     /// Java method `engineInitVerify`.
     ///
     /// ### Java method signature
@@ -20,19 +47,46 @@ open class SignatureSpi: JavaObject {
     ///
     /// ### Java method signature
     /// ```java
-    /// protected abstract void java.security.SignatureSpi.engineInitSign(java.security.PrivateKey) throws java.security.InvalidKeyException
+    /// protected void java.security.SignatureSpi.engineInitSign(java.security.PrivateKey,java.security.SecureRandom) throws java.security.InvalidKeyException
     /// ```
   @JavaMethod
-  open func engineInitSign(_ arg0: PrivateKey?) throws
+  open func engineInitSign(_ arg0: PrivateKey?, _ arg1: SecureRandom?) throws
 
     /// Java method `engineInitSign`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected void java.security.SignatureSpi.engineInitSign(java.security.PrivateKey,java.security.SecureRandom) throws java.security.InvalidKeyException
+    /// protected abstract void java.security.SignatureSpi.engineInitSign(java.security.PrivateKey) throws java.security.InvalidKeyException
     /// ```
   @JavaMethod
-  open func engineInitSign(_ arg0: PrivateKey?, _ arg1: SecureRandom?) throws
+  open func engineInitSign(_ arg0: PrivateKey?) throws
+
+    /// Java method `engineUpdate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected void java.security.SignatureSpi.engineUpdate(java.nio.ByteBuffer)
+    /// ```
+  @JavaMethod
+  open func engineUpdate(_ arg0: ByteBuffer?)
+
+    /// Java method `engineUpdate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected abstract void java.security.SignatureSpi.engineUpdate(byte[],int,int) throws java.security.SignatureException
+    /// ```
+  @JavaMethod
+  open func engineUpdate(_ arg0: [Int8], _ arg1: Int32, _ arg2: Int32) throws
+
+    /// Java method `engineUpdate`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected abstract void java.security.SignatureSpi.engineUpdate(byte) throws java.security.SignatureException
+    /// ```
+  @JavaMethod
+  open func engineUpdate(_ arg0: Int8) throws
 
     /// Java method `engineSign`.
     ///
@@ -56,73 +110,19 @@ open class SignatureSpi: JavaObject {
     ///
     /// ### Java method signature
     /// ```java
-    /// protected abstract boolean java.security.SignatureSpi.engineVerify(byte[]) throws java.security.SignatureException
-    /// ```
-  @JavaMethod
-  open func engineVerify(_ arg0: [Int8]) throws -> Bool
-
-    /// Java method `engineVerify`.
-    ///
-    /// ### Java method signature
-    /// ```java
     /// protected boolean java.security.SignatureSpi.engineVerify(byte[],int,int) throws java.security.SignatureException
     /// ```
   @JavaMethod
   open func engineVerify(_ arg0: [Int8], _ arg1: Int32, _ arg2: Int32) throws -> Bool
 
-    /// Java method `engineUpdate`.
+    /// Java method `engineVerify`.
     ///
     /// ### Java method signature
     /// ```java
-    /// protected abstract void java.security.SignatureSpi.engineUpdate(byte[],int,int) throws java.security.SignatureException
+    /// protected abstract boolean java.security.SignatureSpi.engineVerify(byte[]) throws java.security.SignatureException
     /// ```
   @JavaMethod
-  open func engineUpdate(_ arg0: [Int8], _ arg1: Int32, _ arg2: Int32) throws
-
-    /// Java method `engineUpdate`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected void java.security.SignatureSpi.engineUpdate(java.nio.ByteBuffer)
-    /// ```
-  @JavaMethod
-  open func engineUpdate(_ arg0: ByteBuffer?)
-
-    /// Java method `engineUpdate`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected abstract void java.security.SignatureSpi.engineUpdate(byte) throws java.security.SignatureException
-    /// ```
-  @JavaMethod
-  open func engineUpdate(_ arg0: Int8) throws
-
-    /// Java method `engineSetParameter`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected void java.security.SignatureSpi.engineSetParameter(java.security.spec.AlgorithmParameterSpec) throws java.security.InvalidAlgorithmParameterException
-    /// ```
-  @JavaMethod
-  open func engineSetParameter(_ arg0: AlgorithmParameterSpec?) throws
-
-    /// Java method `engineSetParameter`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected abstract void java.security.SignatureSpi.engineSetParameter(java.lang.String,java.lang.Object) throws java.security.InvalidParameterException
-    /// ```
-  @JavaMethod
-  open func engineSetParameter(_ arg0: String, _ arg1: JavaObject?) throws
-
-    /// Java method `engineGetParameters`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected java.security.AlgorithmParameters java.security.SignatureSpi.engineGetParameters()
-    /// ```
-  @JavaMethod
-  open func engineGetParameters() -> AlgorithmParameters!
+  open func engineVerify(_ arg0: [Int8]) throws -> Bool
 
     /// Java method `engineGetParameter`.
     ///

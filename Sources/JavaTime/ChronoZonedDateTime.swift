@@ -5,23 +5,14 @@ import SwiftJava
 
 @JavaInterface("java.time.chrono.ChronoZonedDateTime", extends: Temporal.self, Comparable<ChronoZonedDateTime<JavaObject>>.self)
 public struct ChronoZonedDateTime<D: AnyJavaObject> {
-  /// Java method `withZoneSameInstant`.
+  /// Java method `withEarlierOffsetAtOverlap`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public abstract java.time.chrono.ChronoZonedDateTime<D> java.time.chrono.ChronoZonedDateTime.withZoneSameInstant(java.time.ZoneId)
+  /// public abstract java.time.chrono.ChronoZonedDateTime<D> java.time.chrono.ChronoZonedDateTime.withEarlierOffsetAtOverlap()
   /// ```
 @JavaMethod
-  public func withZoneSameInstant(_ arg0: ZoneId?) -> ChronoZonedDateTime<D>!
-
-  /// Java method `withZoneSameLocal`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.time.chrono.ChronoZonedDateTime<D> java.time.chrono.ChronoZonedDateTime.withZoneSameLocal(java.time.ZoneId)
-  /// ```
-@JavaMethod
-  public func withZoneSameLocal(_ arg0: ZoneId?) -> ChronoZonedDateTime<D>!
+  public func withEarlierOffsetAtOverlap() -> ChronoZonedDateTime<D>!
 
   /// Java method `withLaterOffsetAtOverlap`.
   ///
@@ -32,14 +23,23 @@ public struct ChronoZonedDateTime<D: AnyJavaObject> {
 @JavaMethod
   public func withLaterOffsetAtOverlap() -> ChronoZonedDateTime<D>!
 
-  /// Java method `withEarlierOffsetAtOverlap`.
+  /// Java method `withZoneSameLocal`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public abstract java.time.chrono.ChronoZonedDateTime<D> java.time.chrono.ChronoZonedDateTime.withEarlierOffsetAtOverlap()
+  /// public abstract java.time.chrono.ChronoZonedDateTime<D> java.time.chrono.ChronoZonedDateTime.withZoneSameLocal(java.time.ZoneId)
   /// ```
 @JavaMethod
-  public func withEarlierOffsetAtOverlap() -> ChronoZonedDateTime<D>!
+  public func withZoneSameLocal(_ arg0: ZoneId?) -> ChronoZonedDateTime<D>!
+
+  /// Java method `withZoneSameInstant`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.time.chrono.ChronoZonedDateTime<D> java.time.chrono.ChronoZonedDateTime.withZoneSameInstant(java.time.ZoneId)
+  /// ```
+@JavaMethod
+  public func withZoneSameInstant(_ arg0: ZoneId?) -> ChronoZonedDateTime<D>!
 
   /// Java method `get`.
   ///

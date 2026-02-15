@@ -4,6 +4,24 @@ import SwiftJava
 
 @JavaClass("java.nio.channels.spi.AbstractSelectableChannel")
 open class AbstractSelectableChannel: SelectableChannel {
+  /// Java method `keyFor`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.nio.channels.SelectionKey java.nio.channels.spi.AbstractSelectableChannel.keyFor(java.nio.channels.Selector)
+  /// ```
+@JavaMethod
+  open override func keyFor(_ arg0: Selector?) -> SelectionKey!
+
+  /// Java method `configureBlocking`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.nio.channels.SelectableChannel java.nio.channels.spi.AbstractSelectableChannel.configureBlocking(boolean) throws java.io.IOException
+  /// ```
+@JavaMethod
+  open override func configureBlocking(_ arg0: Bool) throws -> SelectableChannel!
+
   /// Java method `isBlocking`.
   ///
   /// ### Java method signature
@@ -12,6 +30,24 @@ open class AbstractSelectableChannel: SelectableChannel {
   /// ```
 @JavaMethod
   open override func isBlocking() -> Bool
+
+  /// Java method `blockingLock`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final java.lang.Object java.nio.channels.spi.AbstractSelectableChannel.blockingLock()
+  /// ```
+@JavaMethod
+  open override func blockingLock() -> JavaObject!
+
+  /// Java method `implCloseChannel`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// protected final void java.nio.channels.spi.AbstractSelectableChannel.implCloseChannel() throws java.io.IOException
+  /// ```
+@JavaMethod
+  open override func implCloseChannel() throws
 
   /// Java method `implCloseSelectableChannel`.
   ///
@@ -30,42 +66,6 @@ open class AbstractSelectableChannel: SelectableChannel {
   /// ```
 @JavaMethod
   open func implConfigureBlocking(_ arg0: Bool) throws
-
-  /// Java method `keyFor`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.nio.channels.SelectionKey java.nio.channels.spi.AbstractSelectableChannel.keyFor(java.nio.channels.Selector)
-  /// ```
-@JavaMethod
-  open override func keyFor(_ arg0: Selector?) -> SelectionKey!
-
-  /// Java method `implCloseChannel`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// protected final void java.nio.channels.spi.AbstractSelectableChannel.implCloseChannel() throws java.io.IOException
-  /// ```
-@JavaMethod
-  open override func implCloseChannel() throws
-
-  /// Java method `blockingLock`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.lang.Object java.nio.channels.spi.AbstractSelectableChannel.blockingLock()
-  /// ```
-@JavaMethod
-  open override func blockingLock() -> JavaObject!
-
-  /// Java method `configureBlocking`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public final java.nio.channels.SelectableChannel java.nio.channels.spi.AbstractSelectableChannel.configureBlocking(boolean) throws java.io.IOException
-  /// ```
-@JavaMethod
-  open override func configureBlocking(_ arg0: Bool) throws -> SelectableChannel!
 
   /// Java method `isRegistered`.
   ///

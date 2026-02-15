@@ -107,19 +107,19 @@ open class X509CRL: CRL {
   ///
   /// ### Java method signature
   /// ```java
-  /// public abstract void java.security.cert.X509CRL.verify(java.security.PublicKey,java.lang.String) throws java.security.cert.CRLException,java.security.NoSuchAlgorithmException,java.security.InvalidKeyException,java.security.NoSuchProviderException,java.security.SignatureException
+  /// public void java.security.cert.X509CRL.verify(java.security.PublicKey,java.security.Provider) throws java.security.cert.CRLException,java.security.NoSuchAlgorithmException,java.security.InvalidKeyException,java.security.SignatureException
   /// ```
 @JavaMethod
-  open func verify(_ arg0: PublicKey?, _ arg1: String) throws
+  open func verify(_ arg0: PublicKey?, _ arg1: Provider?) throws
 
   /// Java method `verify`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public void java.security.cert.X509CRL.verify(java.security.PublicKey,java.security.Provider) throws java.security.cert.CRLException,java.security.NoSuchAlgorithmException,java.security.InvalidKeyException,java.security.SignatureException
+  /// public abstract void java.security.cert.X509CRL.verify(java.security.PublicKey,java.lang.String) throws java.security.cert.CRLException,java.security.NoSuchAlgorithmException,java.security.InvalidKeyException,java.security.NoSuchProviderException,java.security.SignatureException
   /// ```
 @JavaMethod
-  open func verify(_ arg0: PublicKey?, _ arg1: Provider?) throws
+  open func verify(_ arg0: PublicKey?, _ arg1: String) throws
 
   /// Java method `verify`.
   ///

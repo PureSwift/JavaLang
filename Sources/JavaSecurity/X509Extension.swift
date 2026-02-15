@@ -4,15 +4,6 @@ import SwiftJava
 
 @JavaInterface("java.security.cert.X509Extension")
 public struct X509Extension {
-  /// Java method `getCriticalExtensionOIDs`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.util.Set<java.lang.String> java.security.cert.X509Extension.getCriticalExtensionOIDs()
-  /// ```
-@JavaMethod
-  public func getCriticalExtensionOIDs() -> JavaSet<JavaString>!
-
   /// Java method `hasUnsupportedCriticalExtension`.
   ///
   /// ### Java method signature
@@ -21,6 +12,15 @@ public struct X509Extension {
   /// ```
 @JavaMethod
   public func hasUnsupportedCriticalExtension() -> Bool
+
+  /// Java method `getCriticalExtensionOIDs`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.util.Set<java.lang.String> java.security.cert.X509Extension.getCriticalExtensionOIDs()
+  /// ```
+@JavaMethod
+  public func getCriticalExtensionOIDs() -> JavaSet<JavaString>!
 
   /// Java method `getNonCriticalExtensionOIDs`.
   ///

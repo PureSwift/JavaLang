@@ -11,15 +11,6 @@ extension KeyStore {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: PrivateKey?, _ arg1: [CertCertificate?], environment: JNIEnvironment? = nil)
 
-    /// Java method `getPrivateKey`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public java.security.PrivateKey java.security.KeyStore$PrivateKeyEntry.getPrivateKey()
-    /// ```
-  @JavaMethod
-  open func getPrivateKey() -> PrivateKey!
-
     /// Java method `getCertificate`.
     ///
     /// ### Java method signature
@@ -28,6 +19,15 @@ extension KeyStore {
     /// ```
   @JavaMethod
   open func getCertificate() -> CertCertificate!
+
+    /// Java method `getPrivateKey`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public java.security.PrivateKey java.security.KeyStore$PrivateKeyEntry.getPrivateKey()
+    /// ```
+  @JavaMethod
+  open func getPrivateKey() -> PrivateKey!
 
     /// Java method `toString`.
     ///

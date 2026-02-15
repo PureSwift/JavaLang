@@ -13,15 +13,6 @@ open class InetSocketAddress: SocketAddress {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: Int32, environment: JNIEnvironment? = nil)
 
-    /// Java method `getHostString`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public final java.lang.String java.net.InetSocketAddress.getHostString()
-    /// ```
-  @JavaMethod
-  open func getHostString() -> String
-
     /// Java method `isUnresolved`.
     ///
     /// ### Java method signature
@@ -30,6 +21,15 @@ open class InetSocketAddress: SocketAddress {
     /// ```
   @JavaMethod
   open func isUnresolved() -> Bool
+
+    /// Java method `getHostString`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public final java.lang.String java.net.InetSocketAddress.getHostString()
+    /// ```
+  @JavaMethod
+  open func getHostString() -> String
 
     /// Java method `equals`.
     ///

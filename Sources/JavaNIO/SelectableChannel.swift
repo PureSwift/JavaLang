@@ -13,15 +13,6 @@ open class SelectableChannel: AbstractInterruptibleChannel {
 @JavaMethod
   open func validOps() -> Int32
 
-  /// Java method `isBlocking`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract boolean java.nio.channels.SelectableChannel.isBlocking()
-  /// ```
-@JavaMethod
-  open func isBlocking() -> Bool
-
   /// Java method `keyFor`.
   ///
   /// ### Java method signature
@@ -31,15 +22,6 @@ open class SelectableChannel: AbstractInterruptibleChannel {
 @JavaMethod
   open func keyFor(_ arg0: Selector?) -> SelectionKey!
 
-  /// Java method `blockingLock`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public abstract java.lang.Object java.nio.channels.SelectableChannel.blockingLock()
-  /// ```
-@JavaMethod
-  open func blockingLock() -> JavaObject!
-
   /// Java method `configureBlocking`.
   ///
   /// ### Java method signature
@@ -48,6 +30,24 @@ open class SelectableChannel: AbstractInterruptibleChannel {
   /// ```
 @JavaMethod
   open func configureBlocking(_ arg0: Bool) throws -> SelectableChannel!
+
+  /// Java method `isBlocking`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract boolean java.nio.channels.SelectableChannel.isBlocking()
+  /// ```
+@JavaMethod
+  open func isBlocking() -> Bool
+
+  /// Java method `blockingLock`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public abstract java.lang.Object java.nio.channels.SelectableChannel.blockingLock()
+  /// ```
+@JavaMethod
+  open func blockingLock() -> JavaObject!
 
   /// Java method `isRegistered`.
   ///

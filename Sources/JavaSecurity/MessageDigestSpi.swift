@@ -52,15 +52,6 @@ open class MessageDigestSpi: JavaObject {
   @JavaMethod
   open func engineDigest() -> [Int8]
 
-    /// Java method `engineGetDigestLength`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// protected int java.security.MessageDigestSpi.engineGetDigestLength()
-    /// ```
-  @JavaMethod
-  open func engineGetDigestLength() -> Int32
-
     /// Java method `engineReset`.
     ///
     /// ### Java method signature
@@ -69,6 +60,15 @@ open class MessageDigestSpi: JavaObject {
     /// ```
   @JavaMethod
   open func engineReset()
+
+    /// Java method `engineGetDigestLength`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// protected int java.security.MessageDigestSpi.engineGetDigestLength()
+    /// ```
+  @JavaMethod
+  open func engineGetDigestLength() -> Int32
 
     /// Java method `clone`.
     ///

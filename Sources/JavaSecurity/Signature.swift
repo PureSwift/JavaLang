@@ -8,28 +8,19 @@ open class Signature: SignatureSpi {
   ///
   /// ### Java method signature
   /// ```java
-  /// public final void java.security.Signature.initVerify(java.security.PublicKey) throws java.security.InvalidKeyException
-  /// ```
-@JavaMethod
-  open func initVerify(_ arg0: PublicKey?) throws
-
-  /// Java method `initVerify`.
-  ///
-  /// ### Java method signature
-  /// ```java
   /// public final void java.security.Signature.initVerify(java.security.cert.Certificate) throws java.security.InvalidKeyException
   /// ```
 @JavaMethod
   open func initVerify(_ arg0: CertCertificate?) throws
 
-  /// Java method `initSign`.
+  /// Java method `initVerify`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final void java.security.Signature.initSign(java.security.PrivateKey) throws java.security.InvalidKeyException
+  /// public final void java.security.Signature.initVerify(java.security.PublicKey) throws java.security.InvalidKeyException
   /// ```
 @JavaMethod
-  open func initSign(_ arg0: PrivateKey?) throws
+  open func initVerify(_ arg0: PublicKey?) throws
 
   /// Java method `initSign`.
   ///
@@ -40,14 +31,14 @@ open class Signature: SignatureSpi {
 @JavaMethod
   open func initSign(_ arg0: PrivateKey?, _ arg1: SecureRandom?) throws
 
-  /// Java method `setParameter`.
+  /// Java method `initSign`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public final void java.security.Signature.setParameter(java.lang.String,java.lang.Object) throws java.security.InvalidParameterException
+  /// public final void java.security.Signature.initSign(java.security.PrivateKey) throws java.security.InvalidKeyException
   /// ```
 @JavaMethod
-  open func setParameter(_ arg0: String, _ arg1: JavaObject?) throws
+  open func initSign(_ arg0: PrivateKey?) throws
 
   /// Java method `setParameter`.
   ///
@@ -57,6 +48,15 @@ open class Signature: SignatureSpi {
   /// ```
 @JavaMethod
   open func setParameter(_ arg0: AlgorithmParameterSpec?) throws
+
+  /// Java method `setParameter`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public final void java.security.Signature.setParameter(java.lang.String,java.lang.Object) throws java.security.InvalidParameterException
+  /// ```
+@JavaMethod
+  open func setParameter(_ arg0: String, _ arg1: JavaObject?) throws
 
   /// Java method `getParameter`.
   ///

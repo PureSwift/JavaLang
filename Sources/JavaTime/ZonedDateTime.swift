@@ -5,50 +5,23 @@ import SwiftJava
 
 @JavaClass("java.time.ZonedDateTime", implements: Temporal.self, ChronoZonedDateTime<LocalDate>.self, Serializable.self)
 open class ZonedDateTime: JavaObject {
-  /// Java method `withZoneSameInstant`.
+  /// Java method `withEarlierOffsetAtOverlap`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public java.time.ZonedDateTime java.time.ZonedDateTime.withZoneSameInstant(java.time.ZoneId)
+  /// public java.time.ZonedDateTime java.time.ZonedDateTime.withEarlierOffsetAtOverlap()
   /// ```
 @JavaMethod
-  open func withZoneSameInstant(_ arg0: ZoneId?) -> ZonedDateTime!
+  open func withEarlierOffsetAtOverlap() -> ZonedDateTime!
 
-  /// Java method `withZoneSameInstant`.
+  /// Java method `withEarlierOffsetAtOverlap`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withZoneSameInstant(java.time.ZoneId)
+  /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withEarlierOffsetAtOverlap()
   /// ```
 @JavaMethod
-  open func withZoneSameInstant(_ arg0: ZoneId?) -> ChronoZonedDateTime!
-
-  /// Java method `toOffsetDateTime`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.time.OffsetDateTime java.time.ZonedDateTime.toOffsetDateTime()
-  /// ```
-@JavaMethod
-  open func toOffsetDateTime() -> OffsetDateTime!
-
-  /// Java method `withZoneSameLocal`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withZoneSameLocal(java.time.ZoneId)
-  /// ```
-@JavaMethod
-  open func withZoneSameLocal(_ arg0: ZoneId?) -> ChronoZonedDateTime!
-
-  /// Java method `withZoneSameLocal`.
-  ///
-  /// ### Java method signature
-  /// ```java
-  /// public java.time.ZonedDateTime java.time.ZonedDateTime.withZoneSameLocal(java.time.ZoneId)
-  /// ```
-@JavaMethod
-  open func withZoneSameLocal(_ arg0: ZoneId?) -> ZonedDateTime!
+  open func withEarlierOffsetAtOverlap() -> ChronoZonedDateTime!
 
   /// Java method `withLaterOffsetAtOverlap`.
   ///
@@ -68,23 +41,50 @@ open class ZonedDateTime: JavaObject {
 @JavaMethod
   open func withLaterOffsetAtOverlap() -> ZonedDateTime!
 
-  /// Java method `withEarlierOffsetAtOverlap`.
+  /// Java method `withZoneSameLocal`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withEarlierOffsetAtOverlap()
+  /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withZoneSameLocal(java.time.ZoneId)
   /// ```
 @JavaMethod
-  open func withEarlierOffsetAtOverlap() -> ChronoZonedDateTime!
+  open func withZoneSameLocal(_ arg0: ZoneId?) -> ChronoZonedDateTime!
 
-  /// Java method `withEarlierOffsetAtOverlap`.
+  /// Java method `withZoneSameLocal`.
   ///
   /// ### Java method signature
   /// ```java
-  /// public java.time.ZonedDateTime java.time.ZonedDateTime.withEarlierOffsetAtOverlap()
+  /// public java.time.ZonedDateTime java.time.ZonedDateTime.withZoneSameLocal(java.time.ZoneId)
   /// ```
 @JavaMethod
-  open func withEarlierOffsetAtOverlap() -> ZonedDateTime!
+  open func withZoneSameLocal(_ arg0: ZoneId?) -> ZonedDateTime!
+
+  /// Java method `withZoneSameInstant`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withZoneSameInstant(java.time.ZoneId)
+  /// ```
+@JavaMethod
+  open func withZoneSameInstant(_ arg0: ZoneId?) -> ChronoZonedDateTime!
+
+  /// Java method `withZoneSameInstant`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public java.time.ZonedDateTime java.time.ZonedDateTime.withZoneSameInstant(java.time.ZoneId)
+  /// ```
+@JavaMethod
+  open func withZoneSameInstant(_ arg0: ZoneId?) -> ZonedDateTime!
+
+  /// Java method `toOffsetDateTime`.
+  ///
+  /// ### Java method signature
+  /// ```java
+  /// public java.time.OffsetDateTime java.time.ZonedDateTime.toOffsetDateTime()
+  /// ```
+@JavaMethod
+  open func toOffsetDateTime() -> OffsetDateTime!
 
   /// Java method `withFixedOffsetZone`.
   ///

@@ -11,6 +11,15 @@ open class Identity: JavaObject {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: IdentityScope?, environment: JNIEnvironment? = nil) throws
 
+    /// Java method `setPublicKey`.
+    ///
+    /// ### Java method signature
+    /// ```java
+    /// public void java.security.Identity.setPublicKey(java.security.PublicKey) throws java.security.KeyManagementException
+    /// ```
+  @JavaMethod
+  open func setPublicKey(_ arg0: PublicKey?) throws
+
     /// Java method `certificates`.
     ///
     /// ### Java method signature
@@ -28,15 +37,6 @@ open class Identity: JavaObject {
     /// ```
   @JavaMethod
   open func identityEquals(_ arg0: Identity?) -> Bool
-
-    /// Java method `setPublicKey`.
-    ///
-    /// ### Java method signature
-    /// ```java
-    /// public void java.security.Identity.setPublicKey(java.security.PublicKey) throws java.security.KeyManagementException
-    /// ```
-  @JavaMethod
-  open func setPublicKey(_ arg0: PublicKey?) throws
 
     /// Java method `setInfo`.
     ///
