@@ -2,9 +2,8 @@
 import JavaIO
 import JavaLang
 import JavaTime
-import JavaKit
-import JavaKitCollection
-import JavaRuntime
+import SwiftJava
+import CSwiftJavaJNI
 
 @JavaClass("java.util.Calendar", implements: Serializable.self, Cloneable.self, Comparable.self)
 open class Calendar: JavaObject {
