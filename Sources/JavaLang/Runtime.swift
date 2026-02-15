@@ -167,7 +167,7 @@ open class Runtime: JavaObject {
   open func totalMemory() -> Int64
 }
 extension Runtime {
-  @JavaClass("java.lang.Runtime$Version", implements: Comparable<Runtime.Version>.self)
+  @JavaClass("java.lang.Runtime$Version", implements: Comparable.self)
   open class Version: JavaObject {
     /// Java method `equals`.
     ///

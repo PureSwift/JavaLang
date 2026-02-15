@@ -2,7 +2,7 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaInterface("java.lang.ProcessHandle", extends: Comparable<ProcessHandle>.self)
+@JavaInterface("java.lang.ProcessHandle", extends: Comparable.self)
 public struct ProcessHandle {
   /// Java method `supportsNormalTermination`.
   ///

@@ -34,7 +34,7 @@ open class Process: JavaObject {
   open func outputWriter() -> BufferedWriter!
 
   @JavaMethod
-  open func getOutputStream() -> JavaIO.OutputStream!
+  open func getOutputStream() -> OutputStream!
 
   @JavaMethod
   open func exitValue() -> Int32
