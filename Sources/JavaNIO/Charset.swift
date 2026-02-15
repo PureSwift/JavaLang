@@ -2,7 +2,7 @@
 import JavaLang
 import SwiftJava
 import SwiftJavaCollection
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.nio.charset.Charset", implements: Comparable.self)
 open class Charset: JavaObject {

@@ -4,7 +4,7 @@ import JavaLang
 import SwiftJava
 import SwiftJavaCollection
 import SwiftJavaFunction
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.nio.file.Files")
 open class Files: JavaObject {

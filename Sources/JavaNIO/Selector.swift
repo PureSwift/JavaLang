@@ -3,7 +3,7 @@ import JavaIO
 import SwiftJava
 import SwiftJavaCollection
 import SwiftJavaFunction
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.nio.channels.Selector", implements: Closeable.self)
 open class Selector: JavaObject {

@@ -2,7 +2,7 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.time.Instant", implements: Temporal.self, TemporalAdjuster.self, Comparable.self, Serializable.self)
 open class Instant: JavaObject {

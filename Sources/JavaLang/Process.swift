@@ -2,7 +2,7 @@
 import JavaIO
 import SwiftJava
 import SwiftJavaIO
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.lang.Process")
 open class Process: JavaObject {

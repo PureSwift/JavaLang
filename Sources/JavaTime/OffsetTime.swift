@@ -2,7 +2,7 @@
 import JavaIO
 import JavaLang
 import SwiftJava
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.time.OffsetTime", implements: Temporal.self, TemporalAdjuster.self, Comparable.self, Serializable.self)
 open class OffsetTime: JavaObject {

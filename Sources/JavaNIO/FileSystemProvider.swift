@@ -2,7 +2,7 @@
 import JavaIO
 import SwiftJava
 import SwiftJavaCollection
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.nio.file.spi.FileSystemProvider")
 open class FileSystemProvider: JavaObject {

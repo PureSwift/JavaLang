@@ -2,7 +2,7 @@
 import SwiftJava
 import SwiftJavaCollection
 import SwiftJavaFunction
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaInterface("java.lang.Iterable")
 public struct Iterable<T: AnyJavaObject> {

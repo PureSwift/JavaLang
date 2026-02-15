@@ -3,7 +3,7 @@ import JavaIO
 import JavaLang
 import SwiftJava
 import SwiftJavaCollection
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.time.Duration", implements: TemporalAmount.self, Comparable.self, Serializable.self)
 open class Duration: JavaObject {

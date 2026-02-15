@@ -2,7 +2,7 @@
 import JavaIO
 import SwiftJava
 import SwiftJavaCollection
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.lang.Runtime")
 open class Runtime: JavaObject {

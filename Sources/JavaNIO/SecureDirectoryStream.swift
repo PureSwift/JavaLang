@@ -2,7 +2,7 @@
 import SwiftJava
 import SwiftJavaCollection
 import SwiftJavaFunction
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaInterface("java.nio.file.SecureDirectoryStream", extends: DirectoryStream<JavaObject>.self)
 public struct SecureDirectoryStream<T: AnyJavaObject> {

@@ -4,7 +4,7 @@ import JavaLang
 import SwiftJava
 import SwiftJavaCollection
 import SwiftJavaFunction
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaInterface("java.nio.file.DirectoryStream", extends: Closeable.self)
 public struct DirectoryStream<T: AnyJavaObject> {

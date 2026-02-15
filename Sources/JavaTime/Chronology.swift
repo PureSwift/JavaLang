@@ -2,7 +2,7 @@
 import JavaLang
 import SwiftJava
 import SwiftJavaCollection
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaInterface("java.time.chrono.Chronology", extends: Comparable.self)
 public struct Chronology {

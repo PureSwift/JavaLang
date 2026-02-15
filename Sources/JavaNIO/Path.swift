@@ -4,7 +4,7 @@ import JavaLang
 import SwiftJava
 import SwiftJavaCollection
 import SwiftJavaFunction
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaInterface("java.nio.file.Path", extends: Comparable.self, Iterable.self, Watchable.self)
 public struct Path {

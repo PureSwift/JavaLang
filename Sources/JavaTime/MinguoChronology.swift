@@ -2,7 +2,7 @@
 import JavaIO
 import SwiftJava
 import SwiftJavaCollection
-import JavaRuntime
+import CSwiftJavaJNI
 
 @JavaClass("java.time.chrono.MinguoChronology", implements: Serializable.self)
 open class MinguoChronology: AbstractChronology {
