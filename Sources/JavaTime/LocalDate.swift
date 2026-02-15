@@ -508,7 +508,7 @@ open class LocalDate: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.LocalDate.atTime(java.time.LocalTime)
   /// ```
 @JavaMethod
-  open func atTime(_ arg0: LocalTime?) -> ChronoLocalDateTime!
+  open func atTime(_ arg0: LocalTime?) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `atTime`.
   ///

@@ -4,7 +4,7 @@ import JavaLang
 import SwiftJava
 
 @JavaInterface("java.time.chrono.ChronoZonedDateTime", extends: Temporal.self)
-public struct ChronoZonedDateTime<D> {
+public struct ChronoZonedDateTime<D: AnyJavaObject> {
   /// Java method `withEarlierOffsetAtOverlap`.
   ///
   /// ### Java method signature

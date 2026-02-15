@@ -121,7 +121,7 @@ open class LocalDateTime: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.LocalDateTime.with(java.time.temporal.TemporalField,long)
   /// ```
 @JavaMethod
-  open func with(_ arg0: TemporalField?, _ arg1: Int64) -> ChronoLocalDateTime!
+  open func with(_ arg0: TemporalField?, _ arg1: Int64) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `with`.
   ///
@@ -130,7 +130,7 @@ open class LocalDateTime: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.LocalDateTime.with(java.time.temporal.TemporalAdjuster)
   /// ```
 @JavaMethod
-  open func with(_ arg0: TemporalAdjuster?) -> ChronoLocalDateTime!
+  open func with(_ arg0: TemporalAdjuster?) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `with`.
   ///
@@ -247,7 +247,7 @@ open class LocalDateTime: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.LocalDateTime.minus(java.time.temporal.TemporalAmount)
   /// ```
 @JavaMethod
-  open func minus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime!
+  open func minus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `minus`.
   ///
@@ -292,7 +292,7 @@ open class LocalDateTime: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.LocalDateTime.minus(long,java.time.temporal.TemporalUnit)
   /// ```
 @JavaMethod
-  open func minus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime!
+  open func minus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `plus`.
   ///
@@ -301,7 +301,7 @@ open class LocalDateTime: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.LocalDateTime.plus(java.time.temporal.TemporalAmount)
   /// ```
 @JavaMethod
-  open func plus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime!
+  open func plus(_ arg0: TemporalAmount?) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `plus`.
   ///
@@ -337,7 +337,7 @@ open class LocalDateTime: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.LocalDateTime.plus(long,java.time.temporal.TemporalUnit)
   /// ```
 @JavaMethod
-  open func plus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime!
+  open func plus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `plus`.
   ///
@@ -490,7 +490,7 @@ open class LocalDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.LocalDateTime.atZone(java.time.ZoneId)
   /// ```
 @JavaMethod
-  open func atZone(_ arg0: ZoneId?) -> ChronoZonedDateTime!
+  open func atZone(_ arg0: ZoneId?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `isAfter`.
   ///

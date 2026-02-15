@@ -22,7 +22,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withEarlierOffsetAtOverlap()
   /// ```
 @JavaMethod
-  open func withEarlierOffsetAtOverlap() -> ChronoZonedDateTime!
+  open func withEarlierOffsetAtOverlap() -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `withLaterOffsetAtOverlap`.
   ///
@@ -31,7 +31,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withLaterOffsetAtOverlap()
   /// ```
 @JavaMethod
-  open func withLaterOffsetAtOverlap() -> ChronoZonedDateTime!
+  open func withLaterOffsetAtOverlap() -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `withLaterOffsetAtOverlap`.
   ///
@@ -49,7 +49,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withZoneSameLocal(java.time.ZoneId)
   /// ```
 @JavaMethod
-  open func withZoneSameLocal(_ arg0: ZoneId?) -> ChronoZonedDateTime!
+  open func withZoneSameLocal(_ arg0: ZoneId?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `withZoneSameLocal`.
   ///
@@ -67,7 +67,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.withZoneSameInstant(java.time.ZoneId)
   /// ```
 @JavaMethod
-  open func withZoneSameInstant(_ arg0: ZoneId?) -> ChronoZonedDateTime!
+  open func withZoneSameInstant(_ arg0: ZoneId?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `withZoneSameInstant`.
   ///
@@ -175,7 +175,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.with(java.time.temporal.TemporalField,long)
   /// ```
 @JavaMethod
-  open func with(_ arg0: TemporalField?, _ arg1: Int64) -> ChronoZonedDateTime!
+  open func with(_ arg0: TemporalField?, _ arg1: Int64) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `with`.
   ///
@@ -184,7 +184,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.with(java.time.temporal.TemporalAdjuster)
   /// ```
 @JavaMethod
-  open func with(_ arg0: TemporalAdjuster?) -> ChronoZonedDateTime!
+  open func with(_ arg0: TemporalAdjuster?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `with`.
   ///
@@ -355,7 +355,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.minus(java.time.temporal.TemporalAmount)
   /// ```
 @JavaMethod
-  open func minus(_ arg0: TemporalAmount?) -> ChronoZonedDateTime!
+  open func minus(_ arg0: TemporalAmount?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `minus`.
   ///
@@ -364,7 +364,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.minus(long,java.time.temporal.TemporalUnit)
   /// ```
 @JavaMethod
-  open func minus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoZonedDateTime!
+  open func minus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `getZone`.
   ///
@@ -391,7 +391,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.plus(java.time.temporal.TemporalAmount)
   /// ```
 @JavaMethod
-  open func plus(_ arg0: TemporalAmount?) -> ChronoZonedDateTime!
+  open func plus(_ arg0: TemporalAmount?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `plus`.
   ///
@@ -400,7 +400,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoZonedDateTime java.time.ZonedDateTime.plus(long,java.time.temporal.TemporalUnit)
   /// ```
 @JavaMethod
-  open func plus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoZonedDateTime!
+  open func plus(_ arg0: Int64, _ arg1: TemporalUnit?) -> ChronoZonedDateTime<JavaObject>!
 
   /// Java method `plus`.
   ///
@@ -661,7 +661,7 @@ open class ZonedDateTime: JavaObject {
   /// public java.time.chrono.ChronoLocalDateTime java.time.ZonedDateTime.toLocalDateTime()
   /// ```
 @JavaMethod
-  open func toLocalDateTime() -> ChronoLocalDateTime!
+  open func toLocalDateTime() -> ChronoLocalDateTime<JavaObject>!
 
   /// Java method `withHour`.
   ///
