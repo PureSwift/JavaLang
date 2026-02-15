@@ -2,8 +2,8 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaClass("java.lang.LinkageError")
-open class LinkageError: JavaError {
+@JavaClass("java.lang.NullPointerException")
+open class NullPointerException: RuntimeException {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
@@ -11,5 +11,8 @@ open class LinkageError: JavaError {
   @_nonoverride public convenience init(_ arg0: String, environment: JNIEnvironment? = nil)
 
   @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: Throwable?, environment: JNIEnvironment? = nil)
+  open override func fillInStackTrace() -> Throwable!
+
+  @JavaMethod
+  open override func getMessage() -> String
 }

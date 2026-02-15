@@ -2,11 +2,8 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaClass("java.lang.VirtualMachineError")
-open class VirtualMachineError: JavaError {
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: Throwable?, environment: JNIEnvironment? = nil)
-
+@JavaClass("java.lang.ClassNotFoundException")
+open class ClassNotFoundException: ReflectiveOperationException {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, _ arg1: Throwable?, environment: JNIEnvironment? = nil)
 
@@ -15,4 +12,7 @@ open class VirtualMachineError: JavaError {
 
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
+
+  @JavaMethod
+  open func getException() -> Throwable!
 }

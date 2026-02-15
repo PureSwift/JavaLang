@@ -2,14 +2,11 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaClass("java.lang.LinkageError")
-open class LinkageError: JavaError {
+@JavaClass("java.lang.NoSuchFieldException")
+open class NoSuchFieldException: ReflectiveOperationException {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, environment: JNIEnvironment? = nil)
-
-  @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: Throwable?, environment: JNIEnvironment? = nil)
 }

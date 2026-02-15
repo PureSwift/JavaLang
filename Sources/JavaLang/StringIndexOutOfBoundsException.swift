@@ -2,8 +2,8 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaClass("java.lang.LinkageError")
-open class LinkageError: JavaError {
+@JavaClass("java.lang.StringIndexOutOfBoundsException")
+open class StringIndexOutOfBoundsException: IndexOutOfBoundsException {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
@@ -11,5 +11,5 @@ open class LinkageError: JavaError {
   @_nonoverride public convenience init(_ arg0: String, environment: JNIEnvironment? = nil)
 
   @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: Throwable?, environment: JNIEnvironment? = nil)
+  @_nonoverride public convenience init(_ arg0: Int32, environment: JNIEnvironment? = nil)
 }

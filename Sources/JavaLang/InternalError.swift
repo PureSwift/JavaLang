@@ -2,8 +2,8 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaClass("java.lang.VirtualMachineError")
-open class VirtualMachineError: JavaError {
+@JavaClass("java.lang.InternalError")
+open class InternalError: VirtualMachineError {
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: Throwable?, environment: JNIEnvironment? = nil)
 

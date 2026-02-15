@@ -2,11 +2,11 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaClass("java.lang.InheritableThreadLocal")
-open class InheritableThreadLocal<T: AnyJavaObject>: ThreadLocal<T> {
+@JavaClass("java.lang.ClassCircularityError")
+open class ClassCircularityError: LinkageError {
   @JavaMethod
   @_nonoverride public convenience init(environment: JNIEnvironment? = nil)
 
   @JavaMethod
-  open func childValue(_ arg0: JavaObject?) -> JavaObject!
+  @_nonoverride public convenience init(_ arg0: String, environment: JNIEnvironment? = nil)
 }

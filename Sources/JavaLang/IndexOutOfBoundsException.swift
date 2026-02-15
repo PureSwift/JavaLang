@@ -2,13 +2,13 @@
 import CSwiftJavaJNI
 import SwiftJava
 
-@JavaClass("java.lang.VirtualMachineError")
-open class VirtualMachineError: JavaError {
+@JavaClass("java.lang.IndexOutOfBoundsException")
+open class IndexOutOfBoundsException: RuntimeException {
   @JavaMethod
-  @_nonoverride public convenience init(_ arg0: Throwable?, environment: JNIEnvironment? = nil)
+  @_nonoverride public convenience init(_ arg0: Int64, environment: JNIEnvironment? = nil)
 
   @JavaMethod
-  @_nonoverride public convenience init(_ arg0: String, _ arg1: Throwable?, environment: JNIEnvironment? = nil)
+  @_nonoverride public convenience init(_ arg0: Int32, environment: JNIEnvironment? = nil)
 
   @JavaMethod
   @_nonoverride public convenience init(_ arg0: String, environment: JNIEnvironment? = nil)
