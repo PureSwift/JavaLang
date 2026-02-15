@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import JavaKit
+import SwiftJava
 @testable import JavaUtil
 
 @Suite
